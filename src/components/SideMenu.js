@@ -42,18 +42,7 @@ const SideMenu = ({ isOpen, onClose }) => {
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#">Blog </a>
-                    <i className="fas fa-plus"></i>
-                    <ul className="sub-menu">
-                      <li><a href="/blog-standard">Blog Standard</a></li>
-                      <li><a href="/blog-with-sidebar">Blog With Sidebar</a></li>
-                      <li><a href="/blog-2-colum">Blog Grid Two Colum</a></li>
-                      <li><a href="/blog-3-colum">Blog Grid Three Colum</a></li>
-                      <li><a href="/blog-single">Blog Single</a></li>
-                      <li><a href="/blog-single-with-sidebar">Blog Single With Sidebar</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="/portfolio">Portfolio</a></li>
                   <li><a href="/services">Services </a></li>
                   <li><a href="/about">About</a> </li>
                   <li><a href="/contact">Contact</a></li>

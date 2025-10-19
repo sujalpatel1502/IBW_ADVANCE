@@ -6,6 +6,7 @@ import "../styles/helper.css";
 import "../styles/unit-test.css";
 import "../styles/main-style.css";
 import "../styles/navbar.css";
+import "../styles/portfolio.css";
 import Header from "../components/Header";
 
 const geistSans = Geist({
@@ -32,6 +33,13 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           crossOrigin="anonymous"
         />
+        <link 
+          rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dark`}

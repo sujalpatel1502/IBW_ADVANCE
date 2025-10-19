@@ -105,20 +105,10 @@ const Header = () => {
                                   <li><a href="/design-studio">Design Studio</a></li>
                                 </ul>
                               </li>
-                              <li>
-                                <a href="#">Blog</a>
-                                <i className="fas fa-plus"></i>
-                                <ul className="sub-menu">
-                                  <li><a href="/blog-standard">Blog Standard</a></li>
-                                  <li><a href="/blog-sidebar">Blog With Sidebar</a></li>
-                                  <li><a href="/blog-2-column">Blog Grid Two Column</a></li>
-                                  <li><a href="/blog-3-column">Blog Grid Three Column</a></li>
-                                  <li><a href="/blog-single">Blog Single</a></li>
-                                </ul>
-                              </li>
+                              <li><a href="/portfolio">Portfolio</a></li>
                               <li><a href="/services">Services</a></li>
                               <li><a href="/about">About</a></li>
-                              <li><a href="/contact">Contact</a></li>
+                              <li><a href="/contact-us">Contact</a></li>
                             </ul>
                           </div>
                         </div>

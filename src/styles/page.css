@@ -402,3 +402,13 @@
 .bg-dark .services-style-five-area {
   background-color: var(--dark-secondary) !important;
 }
+
+/* Services Page Override - Remove Blue Background */
+.bg-dark .services-style-one-item {
+  background: #1d1d1d !important;
+}
+
+/* Override services container background to have gradient */
+div.bg-dark .services-style-one-area {
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, #120f12 90%) !important;
+}
