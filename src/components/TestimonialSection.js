@@ -2,7 +2,89 @@ import React from 'react';
 
 const TestimonialSection = () => {
   return (
-    <div className="testimonial-style-three-area default-padding">
+    <>
+      <style jsx>{`
+        /* Mobile Testimonial Cards Styling */
+        @media (max-width: 767px) {
+          .testimonial-style-three-item {
+            padding: 20px !important;
+            margin-bottom: 20px !important;
+          }
+          
+          .testimonial-style-three-item p {
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            margin-bottom: 15px !important;
+          }
+          
+          .tes-rating {
+            margin-bottom: 15px !important;
+          }
+          
+          .tes-rating span {
+            font-size: 16px !important;
+          }
+          
+          .tes-rating .icon i {
+            font-size: 12px !important;
+          }
+          
+          .tm-provider {
+            flex-direction: row !important;
+            align-items: center !important;
+          }
+          
+          .tm-provider img {
+            width: 40px !important;
+            height: 40px !important;
+            margin-right: 12px !important;
+            margin-bottom: 0 !important;
+          }
+          
+          .tm-provider h4 {
+            font-size: 14px !important;
+            margin-bottom: 2px !important;
+          }
+          
+          .tm-provider span {
+            font-size: 12px !important;
+          }
+          
+          .testimonial-heading h2 {
+            font-size: 36px !important;
+          }
+          
+          .testimonial-heading {
+            margin-bottom: 30px !important;
+          }
+          
+          .testimonial-style-three-area {
+            padding: 40px 0 !important;
+          }
+          
+          .testimonial-style-three-carousel {
+            margin-top: 20px !important;
+          }
+          
+          .testimonial-three-quote {
+            transform: scale(0.8) !important;
+            margin-bottom: 20px !important;
+          }
+          
+          .testimonial-three-quote h2 {
+            font-size: 18px !important;
+          }
+          
+          .testimonial-three-quote .info span {
+            font-size: 12px !important;
+          }
+          
+          .testimonial-three-quote .ratings i {
+            font-size: 10px !important;
+          }
+        }
+      `}</style>
+      <div className="testimonial-style-three-area default-padding">
       <div className="shape-style-one">
         <img className="upDownScrol" src="/shape/14.png" alt="Image Not Found" />
       </div>
@@ -132,6 +214,7 @@ const TestimonialSection = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -50,7 +50,39 @@ export const initServicesAnimation = () => {
         });
       },
       "(max-width:1025px)": function() {
-        ScrollTrigger.getAll().forEach(pbmitpanels => pbmitpanels.kill(true));
+        // Mobile stacking animation
+        let pbmitpanels = gsap.utils.toArray(".item-move-top-item");
+        const spacer = 0;
+
+        let pbmitheight = pbmitpanels[0].offsetHeight + 80; // Smaller spacing for mobile
+        pbmitpanels.forEach((pbmitpanel, i) => {
+          // This is for padding between item
+          gsap.set(pbmitpanel, {
+            top: i * 0
+          });
+          
+          const tween = gsap.to(pbmitpanel, {
+            scrollTrigger: {
+              trigger: pbmitpanel,
+              start: () => `top bottom-=50`, // Smaller offset for mobile
+              end: () => `top top+=0`,
+              scrub: true,
+              invalidateOnRefresh: true
+            },
+            ease: "none",
+            // This is for scaling outside - smaller scale for mobile
+            scale: () => 1 - (pbmitpanels.length - i) * 0.02
+          });
+          
+          ScrollTrigger.create({
+            trigger: pbmitpanel,
+            start: () => "top 80px", // Smaller start point for mobile
+            endTrigger: '.item-move-top-items',
+            end: `bottom top+=${pbmitheight + (pbmitpanels.length * spacer)}`,
+            pin: true,
+            pinSpacing: false,
+          });
+        });
       }
     });
   }
