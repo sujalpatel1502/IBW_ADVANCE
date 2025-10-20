@@ -12,9 +12,13 @@ import ServicesSection from '../components/ServicesSection';
 import PortfolioSection from '../components/PortfolioSection';
 import TestimonialSection from '../components/TestimonialSection';
 import FooterSection from '../components/FooterSection';
+import { safeBodyClass } from '../utils/safeBodyClass';
 
 const HomePage = () => {
   useEffect(() => {
+    // Ensure we're on the client side
+    if (typeof window === 'undefined') return;
+    
     initNavigation();
     initMouseCursor();
     initSmoothScroll();
@@ -28,7 +32,7 @@ const HomePage = () => {
       setTimeout(() => {
         preloader.style.opacity = '0';
         preloader.style.visibility = 'hidden';
-        document.body.classList.add('loaded');
+        safeBodyClass.add('loaded');
       }, 1000);
     }
   }, []);

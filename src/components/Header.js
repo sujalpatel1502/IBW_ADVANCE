@@ -5,8 +5,11 @@ import React, { useState, useEffect } from 'react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+    
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setIsSticky(scrollTop > 0);
@@ -39,7 +42,7 @@ const Header = () => {
         }
       `}</style>
       <header>
-        <nav className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs nav-full-width navbar-fixed ${isSticky ? 'sticked' : ''}`}>
+        <nav className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs nav-full-width navbar-fixed ${isClient && isSticky ? 'sticked' : ''}`}>
           <div className="container-full d-flex justify-content-between align-items-center">
             
             {/* Start Header Navigation */}

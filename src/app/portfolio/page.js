@@ -1,12 +1,16 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { safeBodyClass } from '../../utils/safeBodyClass';
 import FooterSection from '../../components/FooterSection';
 
 const PortfolioPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
+    // Ensure we're on the client side
+    if (typeof window === 'undefined') return;
+    
     // Hide preloader after page loads
     const hidePreloader = () => {
       const preloader = document.getElementById('preloader');
@@ -122,12 +126,12 @@ const PortfolioPage = () => {
 
   const openModal = () => {
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
+    safeBodyClass.setStyle('overflow', 'hidden');
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
+    safeBodyClass.setStyle('overflow', 'auto');
   };
 
   return (

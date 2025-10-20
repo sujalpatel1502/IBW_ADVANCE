@@ -5,10 +5,14 @@ import { initNavigation } from '../../utils/navigation';
 import { initMouseCursor } from '../../utils/mouseCursor';
 import { initSmoothScroll } from '../../utils/smoothScroll';
 import Header from '../../components/Header';
+import { safeBodyClass } from '../../utils/safeBodyClass';
 import FooterSection from '../../components/FooterSection';
 
 const ServicesPage = () => {
   useEffect(() => {
+    // Ensure we're on the client side
+    if (typeof window === 'undefined') return;
+    
     initNavigation();
     initMouseCursor();
     initSmoothScroll();
@@ -22,7 +26,7 @@ const ServicesPage = () => {
         const duration = 2000; // 2 seconds
         
         // Use GSAP if available, otherwise use simple animation
-        if (window.gsap) {
+        if (typeof window !== 'undefined' && window.gsap) {
           window.gsap.fromTo(counter, 
             { textContent: 0 },
             {
@@ -80,7 +84,7 @@ const ServicesPage = () => {
       setTimeout(() => {
         preloader.style.opacity = '0';
         preloader.style.visibility = 'hidden';
-        document.body.classList.add('loaded');
+        safeBodyClass.add('loaded');
       }, 1000);
     }
   }, []);

@@ -5,10 +5,14 @@ import { initNavigation } from '../../utils/navigation';
 import { initMouseCursor } from '../../utils/mouseCursor';
 import { initSmoothScroll } from '../../utils/smoothScroll';
 import Header from '../../components/Header';
+import { safeBodyClass } from '../../utils/safeBodyClass';
 import FooterSection from '../../components/FooterSection';
 
 const ContactUsPage = () => {
   useEffect(() => {
+    // Ensure we're on the client side
+    if (typeof window === 'undefined') return;
+    
     initNavigation();
     initMouseCursor();
     initSmoothScroll();
@@ -19,7 +23,7 @@ const ContactUsPage = () => {
       setTimeout(() => {
         preloader.style.opacity = '0';
         preloader.style.visibility = 'hidden';
-        document.body.classList.add('loaded');
+        safeBodyClass.add('loaded');
       }, 1000);
     }
   }, []);

@@ -8,6 +8,9 @@ const AboutUsPage = () => {
   const [activeTab, setActiveTab] = useState('tab1');
 
   useEffect(() => {
+    // Ensure we're on the client side
+    if (typeof window === 'undefined') return;
+    
     // Hide preloader after page loads
     const hidePreloader = () => {
       const preloader = document.getElementById('preloader');

@@ -1,6 +1,8 @@
 // Navigation JavaScript functionality
 // Based on validnavs.js
 
+import { safeBodyClass } from './safeBodyClass';
+
 export const initializeNavigation = () => {
   // Simple menu functionality
   const simpleMenuItems = document.querySelectorAll('.simple-menu-list > li');
@@ -69,7 +71,7 @@ export const initializeNavigation = () => {
     overlay.addEventListener('click', () => {
       sideMenu.classList.remove('on');
       overlay.classList.remove('opened');
-      document.body.classList.remove('on-side');
+      safeBodyClass.remove('on-side');
     });
   }
 
@@ -82,7 +84,7 @@ export const initializeNavigation = () => {
       if (sideMenu && overlay) {
         sideMenu.classList.remove('on');
         overlay.classList.remove('opened');
-        document.body.classList.remove('on-side');
+        safeBodyClass.remove('on-side');
       }
     }
   });
