@@ -105,21 +105,11 @@ const Header = () => {
                           <div className="simple-menu">
                             <ul className="simple-menu-list">
                               <li>
-                                <a href="#">Home</a>
-                                <i className="fas fa-plus"></i>
-                                <ul className="sub-menu">
-                                  <li><a href="/">Home Main</a></li>
-                                  <li><a href="/modern-agency">Modern Agency</a></li>
-                                  <li><a href="/creative-agency">Creative Agency</a></li>
-                                  <li><a href="/startup-agency">Startup Agency</a></li>
-                                  <li><a href="/digital-agency">Digital Agency</a></li>
-                                  <li><a href="/modern-startup">Modern Startup</a></li>
-                                  <li><a href="/design-studio">Design Studio</a></li>
-                                </ul>
+                                <a href="/">Home</a>
                               </li>
-                              <li><a href="/portfolio">Portfolio</a></li>
                               <li><a href="/services">Services</a></li>
                               <li><a href="/about-us">About Us</a></li>
+                              <li><a href="/portfolio">Portfolio</a></li>
                               <li><a href="/contact-us">Contact</a></li>
                             </ul>
                           </div>

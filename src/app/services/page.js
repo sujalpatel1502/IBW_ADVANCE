@@ -111,8 +111,92 @@ const ServicesPage = () => {
         .fun-factor-circle-area {
           background: #130f12 !important;
         }
+        
+        /* Mobile Fun Factor - Hide on mobile */
+        @media (max-width: 767px) {
+          .fun-factor-circle-area {
+            display: none !important;
+          }
+        }
         .clients-area {
           background: #130f12 !important;
+        }
+        
+        /* Mobile Clients - 2 cards per row */
+        @media (max-width: 767px) {
+          .client-style-one-items {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 0 !important;
+            padding: 0 !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 10px !important;
+            overflow: hidden !important;
+          }
+          
+          .client-style-one-item {
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 20px 15px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            min-height: 80px !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-right: none !important;
+            border-bottom: none !important;
+            position: relative !important;
+          }
+          
+          /* Fix borders for grid layout */
+          .client-style-one-item:nth-child(odd) {
+            border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+          }
+          
+          .client-style-one-item:nth-child(n+3) {
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+          }
+          
+          .client-style-one-item:nth-child(n+5) {
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+          }
+          
+          .client-style-one-item:nth-child(n+7) {
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+          }
+          
+          .client-style-one-item img {
+            max-width: 80px !important;
+            max-height: 40px !important;
+            object-fit: contain !important;
+          }
+          
+          .client-style-one-item .fun-fact {
+            text-align: center !important;
+          }
+          
+          .client-style-one-item .fun-fact .counter {
+            font-size: 18px !important;
+          }
+          
+          .client-style-one-item .fun-fact .count-num {
+            font-size: 18px !important;
+          }
+          
+          .client-style-one-item .fun-fact .operator {
+            font-size: 14px !important;
+          }
+          
+          .client-style-one-item .fun-fact span.medium {
+            font-size: 10px !important;
+            margin-top: 5px !important;
+          }
+          
+          .client-style-one-item a {
+            font-size: 12px !important;
+            padding: 8px 12px !important;
+            text-align: center !important;
+          }
         }
         .pricing-style-one-area {
           background: #130f12 !important;
