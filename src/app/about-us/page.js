@@ -239,6 +239,19 @@ const AboutUsPage = () => {
           }
         }
         
+        /* Mobile About Us Optimizations */
+        @media (max-width: 767px) {
+          /* Hide fun factor section on mobile */
+          .fun-factor-circle-area {
+            display: none !important;
+          }
+          
+          /* Hide image on mobile */
+          .thumb-style-four {
+            display: none !important;
+          }
+        }
+        
         /* Partner Section Styling */
         .partner-style-two-area {
           height: 90vh;
