@@ -26,6 +26,18 @@ const Header = () => {
 
   return (
     <>
+      <style jsx>{`
+        /* Override dark variable for header mobile view */
+        :global(.navbar) {
+          --dark: transparent !important;
+        }
+        
+        @media (max-width: 991px) {
+          :global(.navbar) {
+            --dark: transparent !important;
+          }
+        }
+      `}</style>
       <header>
         <nav className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs nav-full-width navbar-fixed ${isSticky ? 'sticked' : ''}`}>
           <div className="container-full d-flex justify-content-between align-items-center">
