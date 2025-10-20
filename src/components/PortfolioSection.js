@@ -4,6 +4,18 @@ import { ArrowRight } from 'lucide-react';
 const PortfolioSection = () => {
   return (
     <div className="portfolio-style-three-area default-padding">
+      <style jsx>{`
+        @media (max-width: 767px) {
+          .portfolio-style-three-item h2 {
+            font-size: 28px !important;
+            line-height: 1.2 !important;
+            word-break: break-word;
+          }
+          .portfolio-style-three-item h2 strong {
+            display: inline;
+          }
+        }
+      `}</style>
       <div className="container">
         <div className="row">
           <div className="col-lg-7 offset-lg-3">
