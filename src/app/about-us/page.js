@@ -106,6 +106,38 @@ const AboutUsPage = () => {
     
     // Initialize text animation after a short delay to ensure GSAP is loaded
     setTimeout(initTextScrollAnimation, 100);
+    
+    // Initialize Partner Slider
+    const initPartnerSlider = () => {
+      if (window.Swiper) {
+        new window.Swiper('.partnerSwiper', {
+          slidesPerView: 'auto',
+          spaceBetween: 20,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          },
+        });
+      }
+    };
+    
+    // Initialize slider after a short delay
+    setTimeout(initPartnerSlider, 200);
   }, []);
 
   const teamMembers = {
@@ -186,6 +218,148 @@ const AboutUsPage = () => {
           
           .text-scroll-animation p.text {
             color: #cccccc !important;
+          }
+        }
+        
+        /* Partner Section Styling */
+        .partner-style-two-area {
+          height: 90vh;
+          min-height: 90vh;
+          display: flex;
+          align-items: center;
+        }
+        
+        .partner-style-two-area .sub-title {
+          background: rgba(3, 191, 180, 0.3);
+          color: white;
+          padding: 8px 16px;
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          display: inline-block;
+          margin-bottom: 20px;
+        }
+        
+        .partner-style-two-area .title {
+          color: white;
+          font-size: 36px;
+          font-weight: 700;
+          margin-bottom: 20px;
+          line-height: 1.2;
+        }
+        
+        .partner-style-two-area p {
+          color: #cccccc;
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 30px;
+        }
+        
+        .partner-two-thumb {
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+        
+        .partner-two-thumb img {
+          height: 100%;
+          max-height: 500px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+        
+        .partner-slider {
+          position: relative;
+          overflow: visible;
+          padding: 60px 0 20px 0;
+        }
+        
+        .partner-slider .swiper-wrapper {
+          display: flex;
+          margin-top: 20px;
+        }
+        
+        .partner-slider .swiper-slide {
+          flex-shrink: 0;
+          width: 300px;
+        }
+        
+        .partner-two-item {
+          background: #1a1a1a;
+          border: 1px solid #333;
+          border-radius: 15px;
+          padding: 25px;
+          text-align: center;
+          transition: all 0.3s ease;
+          height: 100%;
+          margin-right: 20px;
+          margin-bottom: 20px;
+        }
+        
+        .partner-two-item:hover {
+          transform: translateY(-5px);
+          border-color: rgb(3, 191, 180);
+          box-shadow: 0 10px 30px rgba(3, 191, 180, 0.3);
+        }
+        
+        .partner-two-item h5 {
+          color: #cccccc;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 20px;
+        }
+        
+        .partner-two-item img {
+          max-height: 40px;
+          margin-bottom: 20px;
+          filter: brightness(0) invert(1);
+          transition: all 0.3s ease;
+        }
+        
+        .partner-two-item:hover img {
+          filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+        }
+        
+        .partner-two-item h4 {
+          color: #cccccc;
+          font-size: 16px;
+          font-weight: 600;
+          margin: 0;
+          background: rgba(3, 191, 180, 0.3);
+          color: white;
+          padding: 10px 20px;
+          border-radius: 25px;
+          display: inline-block;
+        }
+        
+        @media (max-width: 991px) {
+          .partner-style-two-area {
+            height: auto;
+            min-height: auto;
+            padding: 60px 0;
+          }
+          
+          .partner-style-two-area .title {
+            font-size: 28px;
+          }
+          
+          .partner-two-item {
+            margin-bottom: 20px;
+            margin-right: 0;
+          }
+          
+          .partner-slider .swiper-slide {
+            width: 100%;
+          }
+          
+          .partner-two-thumb img {
+            max-height: 300px;
+            height: auto;
           }
         }
       `}</style>
@@ -336,17 +510,19 @@ const AboutUsPage = () => {
                   <p>
                     Perceived determine departure explained no forfeite. Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an
                   </p>
-                  <div className="brand-two-carousel swiper mt-60">
-                    <div className="swiper-wrapper">
-                      {partners.map((partner, index) => (
-                        <div key={index} className="swiper-slide">
-                          <div className="partner-two-item">
-                            <h5>{partner.category}</h5>
-                            <img src={partner.image} alt="Image Not Found" />
-                            <h4>{partner.name}</h4>
+                  <div className="partner-slider mt-40">
+                    <div className="swiper partnerSwiper">
+                      <div className="swiper-wrapper">
+                        {partners.map((partner, index) => (
+                          <div key={index} className="swiper-slide">
+                            <div className="partner-two-item">
+                              <h5>{partner.category}</h5>
+                              <img src={partner.image} alt="Image Not Found" />
+                              <h4>{partner.name}</h4>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
