@@ -138,6 +138,40 @@ const AboutUsPage = () => {
     
     // Initialize slider after a short delay
     setTimeout(initPartnerSlider, 200);
+    
+    // Initialize Team Swipers
+    const initTeamSwipers = () => {
+      if (window.Swiper) {
+        // Initialize all team swipers
+        const teamSwipers = ['.teamSwiper1', '.teamSwiper2', '.teamSwiper3'];
+        
+        teamSwipers.forEach((swiperClass, index) => {
+          new window.Swiper(swiperClass, {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: false,
+            autoplay: false,
+            breakpoints: {
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+            },
+          });
+        });
+      }
+    };
+    
+    // Initialize team swipers after a short delay
+    setTimeout(initTeamSwipers, 300);
   }, []);
 
   const teamMembers = {
@@ -360,6 +394,30 @@ const AboutUsPage = () => {
           .partner-two-thumb img {
             max-height: 300px;
             height: auto;
+          }
+        }
+        
+        /* Mobile Team Cards Styling */
+        @media (max-width: 767px) {
+          .team-style-one-item {
+            margin-bottom: 20px;
+          }
+          
+          .team-style-one-item .thumb img {
+            height: 180px !important;
+          }
+          
+          .team-style-one-item .info {
+            padding: 15px !important;
+          }
+          
+          .team-style-one-item .info h4 {
+            font-size: 16px !important;
+            margin-bottom: 3px !important;
+          }
+          
+          .team-style-one-item .info span {
+            font-size: 13px !important;
           }
         }
       `}</style>
@@ -586,23 +644,13 @@ const AboutUsPage = () => {
                 <div className="col-xl-7 offset-xl-1">
                   <div className="tab-content">
                     <div className={`tab-pane fade ${activeTab === 'tab1' ? 'show active' : ''}`}>
-                      <div className="team-style-one-carousel swiper">
+                      <div className="team-style-one-carousel swiper teamSwiper1">
                         <div className="swiper-wrapper">
                           {teamMembers.tab1.map((member, index) => (
                             <div key={index} className="swiper-slide">
                               <div className="team-style-one-item">
                                 <div className="thumb">
                                   <img src={member.image} alt="Image Not Found" />
-                                  <div className="social-overlay">
-                                    <ul>
-                                      <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                                      <li><a href="#"><i className="fab fa-dribbble"></i></a></li>
-                                      <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                                    </ul>
-                                    <div className="icon">
-                                      <i className="fas fa-plus"></i>
-                                    </div>
-                                  </div>
                                 </div>
                                 <div className="info">
                                   <h4><a href="#">{member.name}</a></h4>
@@ -615,23 +663,13 @@ const AboutUsPage = () => {
                       </div>
                     </div>
                     <div className={`tab-pane fade ${activeTab === 'tab2' ? 'show active' : ''}`}>
-                      <div className="team-style-one-carousel swiper">
+                      <div className="team-style-one-carousel swiper teamSwiper2">
                         <div className="swiper-wrapper">
                           {teamMembers.tab2.map((member, index) => (
                             <div key={index} className="swiper-slide">
                               <div className="team-style-one-item">
                                 <div className="thumb">
                                   <img src={member.image} alt="Image Not Found" />
-                                  <div className="social-overlay">
-                                    <ul>
-                                      <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                                      <li><a href="#"><i className="fab fa-dribbble"></i></a></li>
-                                      <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                                    </ul>
-                                    <div className="icon">
-                                      <i className="fas fa-plus"></i>
-                                    </div>
-                                  </div>
                                 </div>
                                 <div className="info">
                                   <h4><a href="#">{member.name}</a></h4>
@@ -644,23 +682,13 @@ const AboutUsPage = () => {
                       </div>
                     </div>
                     <div className={`tab-pane fade ${activeTab === 'tab3' ? 'show active' : ''}`}>
-                      <div className="team-style-one-carousel swiper">
+                      <div className="team-style-one-carousel swiper teamSwiper3">
                         <div className="swiper-wrapper">
                           {teamMembers.tab3.map((member, index) => (
                             <div key={index} className="swiper-slide">
                               <div className="team-style-one-item">
                                 <div className="thumb">
                                   <img src={member.image} alt="Image Not Found" />
-                                  <div className="social-overlay">
-                                    <ul>
-                                      <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                                      <li><a href="#"><i className="fab fa-dribbble"></i></a></li>
-                                      <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                                    </ul>
-                                    <div className="icon">
-                                      <i className="fas fa-plus"></i>
-                                    </div>
-                                  </div>
                                 </div>
                                 <div className="info">
                                   <h4><a href="#">{member.name}</a></h4>
