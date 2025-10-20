@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import FooterSection from '../../components/FooterSection';
+import TestimonialSection from '../../components/TestimonialSection';
 
 const AboutUsPage = () => {
   const [activeTab, setActiveTab] = useState('tab1');
@@ -191,23 +192,6 @@ const AboutUsPage = () => {
       { name: 'Megh Grant', position: 'Content Creator', image: '/team/9.jpg' }
     ]
   };
-
-  const testimonials = [
-    {
-      rating: '5.0',
-      text: 'Targeting consultation discover apartments. ndulgence off under folly death is wrote causes maintaing way spite. Plan upon yet way get coldest spot its week. Almost do am or limits hearts resolve parties the regular intension.',
-      name: 'Michel Dark',
-      position: 'Envato Client',
-      image: '/team/11.jpg'
-    },
-    {
-      rating: '4.7',
-      text: 'Mentioning consultation discover apartments. ndulgence off under folly death is wrote causes maintaing way spite. Plan upon yet way get coldest spot its week. Almost do am or limits hearts resolve parties the regular intension.',
-      name: 'Michel Dark',
-      position: 'Envato Client',
-      image: '/team/12.jpg'
-    }
-  ];
 
   const partners = [
     { category: 'Tech', name: 'access.org', image: '/brand/2.png' },
@@ -418,6 +402,25 @@ const AboutUsPage = () => {
           
           .team-style-one-item .info span {
             font-size: 13px !important;
+          }
+          
+          /* Mobile Tab Buttons Styling */
+          .team-style-one-items .nav-tabs li.nav-item .nav-link {
+            padding: 10px 14px !important;
+            margin-top: 10px !important;
+          }
+          
+          .team-style-one-items .nav-tabs li.nav-item .nav-link strong {
+            font-size: 18px !important;
+            margin-bottom: 4px !important;
+          }
+          
+          .team-style-one-items .nav-tabs li.nav-item .nav-link span {
+            font-size: 14px !important;
+          }
+          
+          .team-style-one-items .nav-tabs li.nav-item:first-child .nav-link {
+            margin-top: 0 !important;
           }
         }
       `}</style>
@@ -708,75 +711,7 @@ const AboutUsPage = () => {
         </div>
         {/* End Team */}
 
-        {/* Start Testimonial */}
-        <div className="testimonial-style-three-area default-padding">
-          <div className="shape-style-one">
-            <img className="upDownScrol" src="/shape/14.png" alt="Image Not Found" />
-          </div>
-          <div className="container">
-            <div className="testimonial-heading">
-              <div className="row">
-                <div className="col-lg-8">
-                  <h2 className="text-large-gradient">
-                    Testimonials
-                  </h2>
-                </div>
-                <div className="col-lg-4 text-end">
-                  <div className="testimonial-three-quote">
-                    <h2>4.9</h2>
-                    <div className="info">
-                      <div className="ratings">
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                      </div>
-                      <span>145 (Review)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="testimonial-style-three-carousel swiper">
-                  <div className="swiper-wrapper">
-                    {testimonials.map((testimonial, index) => (
-                      <div key={index} className="swiper-slide">
-                        <div className="testimonial-style-three-item">
-                          <div className="tes-rating">
-                            <span>{testimonial.rating}</span>
-                            <div className="icon">
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                            </div>
-                          </div>
-                          <p>{testimonial.text}</p>
-                          <div className="tm-provider">
-                            <div className="thumb">
-                              <img src={testimonial.image} alt="Image Not Found" />
-                            </div>
-                            <div className="content">
-                              <h4>{testimonial.name}</h4>
-                              <span>{testimonial.position}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* End Testimonial */}
+       
       </div>
       
       {/* Footer */}
