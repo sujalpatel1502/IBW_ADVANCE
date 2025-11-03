@@ -23,97 +23,97 @@ const blogPosts = {
     readTime: '5 min read',
     category: 'AI & Automation',
     content: `
-      <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+      <p>
         In today's rapidly evolving business landscape, AI automation has emerged as a transformative force, revolutionizing how companies operate, compete, and grow. As we navigate through 2024, the integration of artificial intelligence and automation technologies is no longer a luxury but a necessity for businesses aiming to stay ahead.
       </p>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-4 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         The Rise of AI Automation
       </h2>
-      <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+      <p>
         Artificial Intelligence automation combines the power of machine learning, natural language processing, and robotic process automation to create intelligent systems that can perform complex tasks with minimal human intervention. From customer service chatbots to automated data analysis, AI automation is reshaping industries across the board.
       </p>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-6 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Key Benefits for Businesses
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-lg p-6 hover:border-cyan-500 transition-all">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0">
-              <i class="fas fa-rocket text-xl"></i>
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <div class="benefit-icon">
+              <i class="fas fa-rocket"></i>
             </div>
             <div>
-              <h3 class="text-white font-bold mb-2">Increased Efficiency</h3>
-              <p class="text-gray-400 text-sm">Automate repetitive tasks, freeing up your team to focus on strategic initiatives</p>
+              <h3 class="benefit-title">Increased Efficiency</h3>
+              <p class="benefit-text">Automate repetitive tasks, freeing up your team to focus on strategic initiatives</p>
             </div>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-lg p-6 hover:border-cyan-500 transition-all">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0">
-              <i class="fas fa-chart-line text-xl"></i>
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <div class="benefit-icon">
+              <i class="fas fa-chart-line"></i>
             </div>
             <div>
-              <h3 class="text-white font-bold mb-2">Cost Reduction</h3>
-              <p class="text-gray-400 text-sm">Reduce operational costs by up to 60% through intelligent automation</p>
+              <h3 class="benefit-title">Cost Reduction</h3>
+              <p class="benefit-text">Reduce operational costs by up to 60% through intelligent automation</p>
             </div>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-lg p-6 hover:border-cyan-500 transition-all">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0">
-              <i class="fas fa-crosshairs text-xl"></i>
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <div class="benefit-icon">
+              <i class="fas fa-crosshairs"></i>
             </div>
             <div>
-              <h3 class="text-white font-bold mb-2">Enhanced Accuracy</h3>
-              <p class="text-gray-400 text-sm">Minimize human errors and ensure consistent, high-quality outputs</p>
+              <h3 class="benefit-title">Enhanced Accuracy</h3>
+              <p class="benefit-text">Minimize human errors and ensure consistent, high-quality outputs</p>
             </div>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-lg p-6 hover:border-cyan-500 transition-all">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 flex-shrink-0">
-              <i class="fas fa-clock text-xl"></i>
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <div class="benefit-icon">
+              <i class="fas fa-clock"></i>
             </div>
             <div>
-              <h3 class="text-white font-bold mb-2">24/7 Operations</h3>
-              <p class="text-gray-400 text-sm">Enable round-the-clock operations without additional workforce</p>
+              <h3 class="benefit-title">24/7 Operations</h3>
+              <p class="benefit-text">Enable round-the-clock operations without additional workforce</p>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-4 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Real-World Applications
       </h2>
-      <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+      <p>
         Companies across various sectors are leveraging AI automation to transform their operations. E-commerce platforms use AI for inventory management and personalized recommendations. Healthcare providers automate patient scheduling and administrative tasks. Financial institutions employ AI for fraud detection and risk assessment.
       </p>
 
-      <div class="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-l-4 border-cyan-500 p-6 my-8 rounded-r-lg">
-        <p class="text-white italic mb-3 text-lg">
+      <div class="quote-box">
+        <p class="quote-text">
           "Implementing AI automation has reduced our processing time by 75% while improving accuracy. It's been a game-changer for our operations."
         </p>
-        <p class="text-gray-400 text-sm font-semibold">— Industry Leader</p>
+        <p class="quote-author">— Industry Leader</p>
       </div>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-4 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Getting Started with AI Automation
       </h2>
-      <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+      <p>
         Starting your AI automation journey requires a strategic approach. Begin by identifying repetitive tasks and processes that can benefit from automation. Work with experienced partners like Insta Biz Web to assess your needs, plan implementation, and ensure seamless integration with your existing systems.
       </p>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-4 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         The Future is Automated
       </h2>
-      <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+      <p>
         As AI technology continues to advance, the possibilities for automation are virtually limitless. Businesses that embrace AI automation today will be better positioned to adapt, innovate, and thrive in the future. Don't get left behind – start your automation journey today.
       </p>
     `
@@ -129,199 +129,181 @@ const blogPosts = {
     readTime: '7 min read',
     category: 'IT Services',
     content: `
-      <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+      <p>
         Customer Relationship Management (CRM) systems have become essential tools for businesses of all sizes. For small businesses, finding the right CRM solution that's both affordable and feature-rich can be challenging. Odoo CRM emerges as an excellent choice, offering comprehensive functionality at a fraction of the cost of enterprise solutions.
       </p>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-4 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Why Odoo CRM for Small Businesses?
       </h2>
-      <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+      <p>
         Odoo CRM is an open-source, all-in-one business management software that includes CRM functionality along with other business applications. For small businesses, this integrated approach means you can manage customers, sales, inventory, accounting, and more from a single platform.
       </p>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-6 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Key Features That Matter
       </h2>
-      <div class="space-y-4 mb-8">
-        <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-lg p-5 hover:border-cyan-500 transition-all">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500 flex items-center justify-center text-white flex-shrink-0 font-bold">
-              1
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Lead Management</h3>
+              <p class="step-text">Track leads from multiple sources and convert them into opportunities</p>
             </div>
-            <div>
-              <h3 class="text-white font-bold mb-1">Lead Management</h3>
-              <p class="text-gray-400 text-sm">Track leads from multiple sources and convert them into opportunities</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-lg p-5 hover:border-cyan-500 transition-all">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500 flex items-center justify-center text-white flex-shrink-0 font-bold">
-              2
-            </div>
-            <div>
-              <h3 class="text-white font-bold mb-1">Sales Pipeline</h3>
-              <p class="text-gray-400 text-sm">Visualize your sales process and identify bottlenecks</p>
             </div>
           </div>
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-title">Sales Pipeline</h3>
+              <p class="step-text">Visualize your sales process and identify bottlenecks</p>
         </div>
-        <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-lg p-5 hover:border-cyan-500 transition-all">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500 flex items-center justify-center text-white flex-shrink-0 font-bold">
-              3
             </div>
-            <div>
-              <h3 class="text-white font-bold mb-1">Customer Communication</h3>
-              <p class="text-gray-400 text-sm">Manage all customer interactions in one centralized place</p>
             </div>
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Customer Communication</h3>
+              <p class="step-text">Manage all customer interactions in one centralized place</p>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-lg p-5 hover:border-cyan-500 transition-all">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500 flex items-center justify-center text-white flex-shrink-0 font-bold">
-              4
             </div>
-            <div>
-              <h3 class="text-white font-bold mb-1">Reporting & Analytics</h3>
-              <p class="text-gray-400 text-sm">Get insights into your sales performance and customer behavior</p>
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3 class="step-title">Reporting & Analytics</h3>
+              <p class="step-text">Get insights into your sales performance and customer behavior</p>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-6 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Implementation Steps
       </h2>
-      <div class="space-y-4 mb-8">
-        <div class="bg-gradient-to-r from-gray-900 to-gray-950 p-6 rounded-lg border border-gray-800">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-              1
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Planning & Assessment</h3>
+              <p class="step-text">Evaluate your current processes, identify requirements, and set clear objectives for your CRM implementation.</p>
             </div>
-            <div class="flex-1">
-              <h3 class="text-white text-xl font-bold mb-2">Planning & Assessment</h3>
-              <p class="text-gray-300">Evaluate your current processes, identify requirements, and set clear objectives for your CRM implementation.</p>
+            </div>
+          </div>
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-title">Customization</h3>
+              <p class="step-text">Customize Odoo CRM to match your business workflows, including fields, stages, and automation rules.</p>
+        </div>
+            </div>
+            </div>
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Data Migration</h3>
+              <p class="step-text">Safely migrate existing customer data and ensure data integrity throughout the process.</p>
+          </div>
+        </div>
+            </div>
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3 class="step-title">Team Training</h3>
+              <p class="step-text">Train your team on using Odoo CRM effectively to maximize adoption and ROI.</p>
             </div>
           </div>
         </div>
-        <div class="bg-gradient-to-r from-gray-900 to-gray-950 p-6 rounded-lg border border-gray-800">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-              2
-            </div>
-            <div class="flex-1">
-              <h3 class="text-white text-xl font-bold mb-2">Customization</h3>
-              <p class="text-gray-300">Customize Odoo CRM to match your business workflows, including fields, stages, and automation rules.</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-gradient-to-r from-gray-900 to-gray-950 p-6 rounded-lg border border-gray-800">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-              3
-            </div>
-            <div class="flex-1">
-              <h3 class="text-white text-xl font-bold mb-2">Data Migration</h3>
-              <p class="text-gray-300">Safely migrate existing customer data and ensure data integrity throughout the process.</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-gradient-to-r from-gray-900 to-gray-950 p-6 rounded-lg border border-gray-800">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-              4
-            </div>
-            <div class="flex-1">
-              <h3 class="text-white text-xl font-bold mb-2">Team Training</h3>
-              <p class="text-gray-300">Train your team on using Odoo CRM effectively to maximize adoption and ROI.</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-gradient-to-r from-gray-900 to-gray-950 p-6 rounded-lg border border-gray-800">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-              5
-            </div>
-            <div class="flex-1">
-              <h3 class="text-white text-xl font-bold mb-2">Go Live & Support</h3>
-              <p class="text-gray-300">Launch your CRM system and provide ongoing support to ensure smooth operations.</p>
+        <div class="step-item">
+          <div class="step-header">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3 class="step-title">Go Live & Support</h3>
+              <p class="step-text">Launch your CRM system and provide ongoing support to ensure smooth operations.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-4 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Common Pitfalls to Avoid
       </h2>
-      <p class="text-gray-300 leading-relaxed mb-4 text-lg">
+      <p>
         Many small businesses make mistakes during CRM implementation. Avoid these common pitfalls:
       </p>
-      <div class="bg-gradient-to-br from-red-500/5 to-orange-500/5 border border-red-500/20 rounded-lg p-6 mb-6">
-        <ul class="space-y-3">
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-times-circle text-red-400 mt-1 flex-shrink-0"></i>
+      <div class="warning-box">
+        <ul class="feature-list">
+          <li class="feature-item">
+            <i class="fas fa-times-circle feature-icon cross"></i>
             <span>Not clearly defining business requirements before implementation</span>
           </li>
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-times-circle text-red-400 mt-1 flex-shrink-0"></i>
+          <li class="feature-item">
+            <i class="fas fa-times-circle feature-icon cross"></i>
             <span>Over-customizing the system, making it complex and difficult to maintain</span>
           </li>
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-times-circle text-red-400 mt-1 flex-shrink-0"></i>
+          <li class="feature-item">
+            <i class="fas fa-times-circle feature-icon cross"></i>
             <span>Insufficient team training leading to low adoption rates</span>
           </li>
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-times-circle text-red-400 mt-1 flex-shrink-0"></i>
+          <li class="feature-item">
+            <i class="fas fa-times-circle feature-icon cross"></i>
             <span>Neglecting data quality during migration</span>
           </li>
         </ul>
       </div>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-4 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Best Practices for Success
       </h2>
-      <div class="bg-gradient-to-br from-green-500/5 to-cyan-500/5 border border-green-500/20 rounded-lg p-6 mb-6">
-        <ul class="space-y-3">
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-check-circle text-green-400 mt-1 flex-shrink-0"></i>
+      <div class="success-box">
+        <ul class="feature-list">
+          <li class="feature-item">
+            <i class="fas fa-check-circle feature-icon check"></i>
             <span>Start with essential features and expand gradually</span>
           </li>
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-check-circle text-green-400 mt-1 flex-shrink-0"></i>
+          <li class="feature-item">
+            <i class="fas fa-check-circle feature-icon check"></i>
             <span>Involve your team in the planning process</span>
           </li>
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-check-circle text-green-400 mt-1 flex-shrink-0"></i>
+          <li class="feature-item">
+            <i class="fas fa-check-circle feature-icon check"></i>
             <span>Choose a reliable implementation partner</span>
           </li>
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-check-circle text-green-400 mt-1 flex-shrink-0"></i>
+          <li class="feature-item">
+            <i class="fas fa-check-circle feature-icon check"></i>
             <span>Regularly review and optimize your CRM processes</span>
           </li>
         </ul>
       </div>
 
-      <div class="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-cyan-500/30 p-8 my-10 rounded-xl">
-        <h3 class="text-white text-xl font-bold mb-3">Need Help with Odoo CRM Implementation?</h3>
-        <p class="text-gray-300 mb-5 leading-relaxed">
+      <div class="cta-box">
+        <h3 class="cta-box-title">Need Help with Odoo CRM Implementation?</h3>
+        <p class="cta-box-text">
           Insta Biz Web specializes in Odoo CRM implementation for small and medium businesses. Our expert team can help you plan, customize, and deploy Odoo CRM to transform your business operations.
         </p>
-        <Link href="/contact-us" class="inline-flex items-center gap-2 bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
+        <a href="/contact-us" class="cta-box-link">
           Contact Us Today <i class="fas fa-arrow-right"></i>
-        </Link>
+        </a>
       </div>
 
-      <h2 class="text-white text-2xl md:text-3xl font-bold mb-4 mt-10 flex items-center gap-3">
-        <span class="w-1 h-8 bg-cyan-500 rounded"></span>
+      <h2>
+        <span></span>
         Conclusion
       </h2>
-      <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+      <p>
         Odoo CRM implementation can significantly improve your small business operations, but success requires careful planning, proper customization, and team commitment. By following best practices and working with experienced partners, you can unlock the full potential of Odoo CRM for your business.
       </p>
     `
@@ -353,76 +335,746 @@ const BlogDetailPage = () => {
 
   if (!blog) {
     return (
-      <div className="bg-black min-h-screen">
+      <>
+        <style jsx>{`
+          .not-found-wrapper {
+            background-color: #000;
+            min-height: 100vh;
+          }
+          .not-found-container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+            text-align: center;
+          }
+          .not-found-inner {
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .not-found-icon {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 9999px;
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+          }
+          .not-found-icon i {
+            font-size: 2.25rem;
+            color: #4b5563;
+          }
+          .not-found-title {
+            color: #fff;
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+          .not-found-text {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+          }
+          .not-found-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #22d3ee;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+          }
+          .not-found-link:hover {
+            color: #67e8f9;
+          }
+        `}</style>
+        <div className="not-found-wrapper">
         <Header />
-        <div className="max-w-7xl mx-auto px-4 py-32 text-center">
-          <div className="max-w-2xl mx-auto">
-            <div className="w-24 h-24 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center mx-auto mb-6">
-              <i className="fas fa-search text-4xl text-gray-600"></i>
+          <div className="not-found-container">
+            <div className="not-found-inner">
+              <div className="not-found-icon">
+                <i className="fas fa-search"></i>
             </div>
-            <h1 className="text-white text-4xl font-bold mb-4">Blog Not Found</h1>
-            <p className="text-gray-400 mb-8 text-lg">The blog post you're looking for doesn't exist or has been removed.</p>
-            <Link href="/blogs" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold">
+              <h1 className="not-found-title">Blog Not Found</h1>
+              <p className="not-found-text">The blog post you're looking for doesn't exist or has been removed.</p>
+              <Link href="/blogs" className="not-found-link">
               <i className="fas fa-arrow-left"></i> Back to Blogs
             </Link>
           </div>
         </div>
         <FooterSection />
       </div>
+      </>
     );
   }
 
   return (
-    <div className="bg-black min-h-screen">
-      <Header />
-      
-      {/* Breadcrumb */}
-      <div className="bg-black pt-32 pb-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <nav className="flex items-center gap-3 text-sm mb-6 flex-wrap">
-              <Link href="/" className="text-gray-400 hover:text-cyan-400 transition-colors">Home</Link>
-              <i className="fas fa-chevron-right text-gray-600 text-xs"></i>
-              <Link href="/blogs" className="text-gray-400 hover:text-cyan-400 transition-colors">Blogs</Link>
-              <i className="fas fa-chevron-right text-gray-600 text-xs"></i>
-              <span className="text-cyan-400 truncate max-w-xs">{blog.category}</span>
+    <>
+      <style jsx>{`
+        .blog-detail-wrapper {
+          background-color: #000;
+          min-height: 100vh;
+        }
+        .breadcrumb-section {
+          background-color: #000;
+          padding-top: 8rem;
+          padding-bottom: 2rem;
+        }
+        .breadcrumb-container {
+          max-width: 80rem;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .breadcrumb-inner {
+          max-width: 56rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .breadcrumb-nav {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          font-size: 0.875rem;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+        }
+        .breadcrumb-link {
+          color: #9ca3af;
+          text-decoration: none;
+          transition: color 0.3s;
+        }
+        .breadcrumb-link:hover {
+          color: #22d3ee;
+        }
+        .breadcrumb-icon {
+          color: #4b5563;
+          font-size: 0.75rem;
+        }
+        .breadcrumb-active {
+          color: #22d3ee;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 12rem;
+        }
+        .article-section {
+          background-color: #000;
+          padding-bottom: 5rem;
+        }
+        .article-container {
+          max-width: 80rem;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .article-inner {
+          max-width: 56rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .blog-header {
+          margin-bottom: 2.5rem;
+        }
+        .blog-header-badge-wrapper {
+          margin-bottom: 1.25rem;
+        }
+        .blog-header-badge {
+          background: linear-gradient(to right, #06b6d4, #3b82f6);
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border-radius: 9999px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+          display: inline-block;
+        }
+        .blog-title {
+          color: #fff;
+          font-size: 1.875rem;
+          font-weight: 700;
+          margin-bottom: 1.5rem;
+          line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+          .blog-title {
+            font-size: 2.25rem;
+          }
+        }
+        @media (min-width: 1024px) {
+          .blog-title {
+            font-size: 3rem;
+          }
+        }
+        .blog-meta-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 1rem;
+          padding-top: 1.5rem;
+          border-top: 1px solid #1f2937;
+        }
+        .author-section {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+        .author-avatar-large {
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 9999px;
+          background: linear-gradient(to bottom right, #22d3ee, #3b82f6);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-weight: 700;
+          font-size: 1.25rem;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .author-info {
+          color: #fff;
+          font-weight: 600;
+          font-size: 1.125rem;
+        }
+        .author-role {
+          color: #9ca3af;
+          font-size: 0.875rem;
+        }
+        .blog-meta-info {
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+          font-size: 0.875rem;
+          color: #9ca3af;
+        }
+        .blog-meta-item {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .blog-meta-icon {
+          color: #22d3ee;
+        }
+        .blog-meta-separator {
+          color: #374151;
+        }
+        .featured-image-wrapper {
+          margin-bottom: 3rem;
+          border-radius: 0.75rem;
+          overflow: hidden;
+          border: 1px solid #1f2937;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .featured-image {
+          width: 100%;
+          height: 18rem;
+          object-fit: cover;
+        }
+        @media (min-width: 768px) {
+          .featured-image {
+            height: 500px;
+          }
+        }
+        .blog-content-wrapper {
+          color: #d1d5db;
+        }
+        .blog-content-wrapper h2 {
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-top: 2.5rem;
+          margin-bottom: 1rem;
+        }
+        @media (min-width: 768px) {
+          .blog-content-wrapper h2 {
+            font-size: 1.875rem;
+          }
+        }
+        .blog-content-wrapper p {
+          color: #d1d5db;
+          line-height: 1.75;
+          margin-bottom: 1.5rem;
+          font-size: 1.125rem;
+        }
+        .blog-content-wrapper ul {
+          margin-bottom: 1.5rem;
+        }
+        .blog-content-wrapper li {
+          margin-bottom: 0.5rem;
+          color: #d1d5db;
+        }
+        .blog-content-wrapper a {
+          color: #22d3ee;
+          transition: color 0.3s;
+        }
+        .blog-content-wrapper a:hover {
+          color: #67e8f9;
+        }
+        .blog-content-wrapper h2 {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+        .blog-content-wrapper h2 span {
+          width: 0.25rem;
+          height: 2rem;
+          background-color: #06b6d4;
+          border-radius: 0.25rem;
+        }
+        .blog-content-wrapper .benefit-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          margin-bottom: 2rem;
+        }
+        @media (min-width: 768px) {
+          .blog-content-wrapper .benefit-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        .blog-content-wrapper .benefit-card {
+          background: linear-gradient(to bottom right, #111827, #030712);
+          border: 1px solid #1f2937;
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          transition: all 0.3s;
+        }
+        .blog-content-wrapper .benefit-card:hover {
+          border-color: #06b6d4;
+        }
+        .blog-content-wrapper .benefit-header {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+        .blog-content-wrapper .benefit-icon {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 0.5rem;
+          background-color: rgba(6, 182, 212, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #22d3ee;
+          flex-shrink: 0;
+        }
+        .blog-content-wrapper .benefit-icon i {
+          font-size: 1.25rem;
+        }
+        .blog-content-wrapper .benefit-title {
+          color: #fff;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+        .blog-content-wrapper .benefit-text {
+          color: #9ca3af;
+          font-size: 0.875rem;
+        }
+        .blog-content-wrapper .quote-box {
+          background: linear-gradient(to bottom right, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1));
+          border-left: 4px solid #06b6d4;
+          padding: 1.5rem;
+          margin: 2rem 0;
+          border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .blog-content-wrapper .quote-text {
+          color: #fff;
+          font-style: italic;
+          margin-bottom: 0.75rem;
+          font-size: 1.125rem;
+        }
+        .blog-content-wrapper .quote-author {
+          color: #9ca3af;
+          font-size: 0.875rem;
+          font-weight: 600;
+        }
+        .blog-content-wrapper .feature-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          margin-bottom: 1.5rem;
+        }
+        .blog-content-wrapper .feature-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.75rem;
+          color: #d1d5db;
+        }
+        .blog-content-wrapper .feature-icon {
+          margin-top: 0.25rem;
+          flex-shrink: 0;
+        }
+        .blog-content-wrapper .feature-icon.check {
+          color: #4ade80;
+        }
+        .blog-content-wrapper .feature-icon.cross {
+          color: #f87171;
+        }
+        .blog-content-wrapper .step-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          margin-bottom: 2rem;
+        }
+        .blog-content-wrapper .step-item {
+          background: linear-gradient(to right, #111827, #030712);
+          padding: 1.5rem;
+          border-radius: 0.5rem;
+          border: 1px solid #1f2937;
+        }
+        .blog-content-wrapper .step-header {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+        .blog-content-wrapper .step-number {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 9999px;
+          background: linear-gradient(to bottom right, #22d3ee, #3b82f6);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-weight: 700;
+          font-size: 1.125rem;
+          flex-shrink: 0;
+        }
+        .blog-content-wrapper .step-content {
+          flex: 1;
+        }
+        .blog-content-wrapper .step-title {
+          color: #fff;
+          font-size: 1.25rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+        .blog-content-wrapper .step-text {
+          color: #d1d5db;
+        }
+        .blog-content-wrapper .warning-box {
+          background: linear-gradient(to bottom right, rgba(239, 68, 68, 0.05), rgba(249, 115, 22, 0.05));
+          border: 1px solid rgba(239, 68, 68, 0.2);
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+        .blog-content-wrapper .success-box {
+          background: linear-gradient(to bottom right, rgba(34, 197, 94, 0.05), rgba(6, 182, 212, 0.05));
+          border: 1px solid rgba(34, 197, 94, 0.2);
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+        .blog-content-wrapper .cta-box {
+          background: linear-gradient(to bottom right, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1));
+          border: 1px solid rgba(6, 182, 212, 0.3);
+          padding: 2rem;
+          margin: 2.5rem 0;
+          border-radius: 0.75rem;
+        }
+        .blog-content-wrapper .cta-box-title {
+          color: #fff;
+          font-size: 1.25rem;
+          font-weight: 700;
+          margin-bottom: 0.75rem;
+        }
+        .blog-content-wrapper .cta-box-text {
+          color: #d1d5db;
+          margin-bottom: 1.25rem;
+          line-height: 1.75;
+        }
+        .blog-content-wrapper .cta-box-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          background-color: #06b6d4;
+          color: #fff;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s;
+          box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.3);
+        }
+        .blog-content-wrapper .cta-box-link:hover {
+          background-color: #0891b2;
+          box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.5);
+        }
+        .share-section {
+          margin-top: 4rem;
+          padding-top: 2rem;
+          border-top: 1px solid #1f2937;
+        }
+        .share-card {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 1.5rem;
+          background: linear-gradient(to bottom right, #111827, #030712);
+          border-radius: 0.75rem;
+          padding: 1.5rem;
+          border: 1px solid #1f2937;
+        }
+        @media (min-width: 768px) {
+          .share-card {
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+        .share-title {
+          color: #fff;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          font-size: 1.125rem;
+        }
+        .share-buttons {
+          display: flex;
+          gap: 0.75rem;
+        }
+        .share-button {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 9999px;
+          background-color: #1f2937;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          text-decoration: none;
+          transition: all 0.3s;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .share-button:hover {
+          transform: scale(1.1);
+        }
+        .share-button-facebook:hover {
+          background-color: #2563eb;
+        }
+        .share-button-twitter:hover {
+          background-color: #06b6d4;
+        }
+        .share-button-linkedin:hover {
+          background-color: #1d4ed8;
+        }
+        .share-button-whatsapp:hover {
+          background-color: #16a34a;
+        }
+        .back-link {
+          color: #22d3ee;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: 600;
+          font-size: 0.875rem;
+          transition: all 0.3s;
+        }
+        .back-link:hover {
+          color: #67e8f9;
+          transform: translateX(-4px);
+        }
+        .related-section {
+          margin-top: 5rem;
+          padding-top: 3rem;
+          border-top: 1px solid #1f2937;
+        }
+        .related-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+          .related-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        .related-card {
+          display: block;
+          text-decoration: none;
+        }
+        .related-card-item {
+          background: linear-gradient(to bottom right, #111827, #030712);
+          border-radius: 0.75rem;
+          overflow: hidden;
+          border: 1px solid #1f2937;
+          transition: all 0.5s;
+          height: 100%;
+        }
+        .related-card:hover .related-card-item {
+          border-color: #06b6d4;
+          box-shadow: 0 20px 25px -5px rgba(6, 182, 212, 0.2);
+        }
+        .related-image-wrapper {
+          position: relative;
+          height: 12rem;
+          overflow: hidden;
+        }
+        .related-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.7s;
+        }
+        .related-card:hover .related-image {
+          transform: scale(1.1);
+        }
+        .related-content {
+          padding: 1.5rem;
+        }
+        .related-meta {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-bottom: 0.75rem;
+          font-size: 0.75rem;
+          color: #9ca3af;
+        }
+        .related-title {
+          color: #fff;
+          font-size: 1.125rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          line-height: 1.2;
+          transition: color 0.3s;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .related-card:hover .related-title {
+          color: #22d3ee;
+        }
+        .related-excerpt {
+          color: #9ca3af;
+          font-size: 0.875rem;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-height: 1.75;
+        }
+        .related-footer {
+          margin-top: 1rem;
+          padding-top: 1rem;
+          border-top: 1px solid #1f2937;
+        }
+        .related-read-more {
+          color: #22d3ee;
+          font-size: 0.875rem;
+          font-weight: 600;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          transition: transform 0.3s;
+        }
+        .related-card:hover .related-read-more {
+          transform: translateX(0.5rem);
+        }
+        .section-header {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-bottom: 2rem;
+        }
+        .section-divider {
+          height: 1px;
+          background-color: #06b6d4;
+          width: 3rem;
+        }
+        .section-title {
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+        @media (min-width: 768px) {
+          .section-title {
+            font-size: 1.875rem;
+          }
+        }
+        .image-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+        }
+        .category-badge-small {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          background-color: #06b6d4;
+          color: #fff;
+          padding: 0.25rem 0.75rem;
+          border-radius: 9999px;
+          font-size: 0.75rem;
+          font-weight: 600;
+        }
+      `}</style>
+      <div className="blog-detail-wrapper">
+        <Header />
+       
+        {/* Breadcrumb */}
+        <div className="breadcrumb-section">
+        <div className="breadcrumb-container">
+          <div className="breadcrumb-inner">
+            <nav className="breadcrumb-nav">
+              <Link href="/" className="breadcrumb-link">Home</Link>
+              <i className="fas fa-chevron-right breadcrumb-icon"></i>
+              <Link href="/blogs" className="breadcrumb-link">Blogs</Link>
+              <i className="fas fa-chevron-right breadcrumb-icon"></i>
+              <span className="breadcrumb-active">{blog.category}</span>
             </nav>
           </div>
         </div>
       </div>
 
       {/* Blog Detail Content */}
-      <article className="bg-black pb-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+      <article className="article-section">
+        <div className="article-container">
+          <div className="article-inner">
             {/* Header */}
-            <div className="mb-10">
-              <div className="mb-5">
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider shadow-lg">
+            <div className="blog-header">
+              <div className="blog-header-badge-wrapper">
+                <span className="blog-header-badge">
                   {blog.category}
                 </span>
               </div>
-              <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <h1 className="blog-title">
                 {blog.title}
               </h1>
-              <div className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-gray-800">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+              <div className="blog-meta-header">
+                <div className="author-section">
+                  <div className="author-avatar-large">
                     {blog.author.charAt(0)}
                   </div>
                   <div>
-                    <p className="text-white font-semibold text-lg">{blog.author}</p>
-                    <p className="text-gray-400 text-sm">Content Writer</p>
+                    <p className="author-info">{blog.author}</p>
+                    <p className="author-role">Content Writer</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-5 text-sm text-gray-400">
-                  <span className="flex items-center gap-2">
-                    <i className="far fa-calendar text-cyan-400"></i>
+                <div className="blog-meta-info">
+                  <span className="blog-meta-item">
+                    <i className="far fa-calendar blog-meta-icon"></i>
                     {blog.date}
                   </span>
-                  <span className="text-gray-700">•</span>
-                  <span className="flex items-center gap-2">
-                    <i className="far fa-clock text-cyan-400"></i>
+                  <span className="blog-meta-separator">•</span>
+                  <span className="blog-meta-item">
+                    <i className="far fa-clock blog-meta-icon"></i>
                     {blog.readTime}
                   </span>
                 </div>
@@ -430,35 +1082,31 @@ const BlogDetailPage = () => {
             </div>
 
             {/* Featured Image */}
-            <div className="mb-12 rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+            <div className="featured-image-wrapper">
               <img 
                 src={blog.image} 
                 alt={blog.title}
-                className="w-full h-72 md:h-[500px] object-cover"
+                className="featured-image"
               />
             </div>
 
             {/* Content */}
             <div 
-              className="prose prose-invert prose-lg max-w-none
-                [&_h2]:text-white [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-4 
-                [&_p]:text-gray-300 [&_p]:leading-relaxed [&_p]:mb-6 [&_p]:text-lg
-                [&_ul]:mb-6 [&_li]:mb-2 [&_li]:text-gray-300
-                [&_a]:text-cyan-400 [&_a]:hover:text-cyan-300 [&_a]:transition-colors"
+              className="blog-content-wrapper"
               dangerouslySetInnerHTML={{ __html: blog.content }}
             />
 
             {/* Share Section */}
-            <div className="mt-16 pt-8 border-t border-gray-800">
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-gradient-to-br from-gray-900 to-gray-950 rounded-xl p-6 border border-gray-800">
+            <div className="share-section">
+              <div className="share-card">
                 <div>
-                  <h3 className="text-white font-bold mb-4 text-lg">Share this article</h3>
-                  <div className="flex gap-3">
+                  <h3 className="share-title">Share this article</h3>
+                  <div className="share-buttons">
                     <a 
                       href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 shadow-lg"
+                      className="share-button share-button-facebook"
                       aria-label="Share on Facebook"
                     >
                       <i className="fab fa-facebook-f"></i>
@@ -467,7 +1115,7 @@ const BlogDetailPage = () => {
                       href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}&text=${encodeURIComponent(blog.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-gray-800 hover:bg-cyan-500 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 shadow-lg"
+                      className="share-button share-button-twitter"
                       aria-label="Share on Twitter"
                     >
                       <i className="fab fa-twitter"></i>
@@ -476,7 +1124,7 @@ const BlogDetailPage = () => {
                       href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-gray-800 hover:bg-blue-700 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 shadow-lg"
+                      className="share-button share-button-linkedin"
                       aria-label="Share on LinkedIn"
                     >
                       <i className="fab fa-linkedin-in"></i>
@@ -485,7 +1133,7 @@ const BlogDetailPage = () => {
                       href={`https://api.whatsapp.com/send?text=${encodeURIComponent(blog.title + ' ' + (typeof window !== 'undefined' ? window.location.href : ''))}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 shadow-lg"
+                      className="share-button share-button-whatsapp"
                       aria-label="Share on WhatsApp"
                     >
                       <i className="fab fa-whatsapp"></i>
@@ -494,7 +1142,7 @@ const BlogDetailPage = () => {
                 </div>
                 <Link 
                   href="/blogs"
-                  className="text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-2 font-semibold text-sm transition-all hover:translate-x-[-4px]"
+                  className="back-link"
                 >
                   <i className="fas fa-arrow-left"></i> Back to All Blogs
                 </Link>
@@ -502,51 +1150,51 @@ const BlogDetailPage = () => {
             </div>
 
             {/* Related Posts */}
-            <div className="mt-20 pt-12 border-t border-gray-800">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="h-px bg-cyan-500 w-12"></div>
-                <h2 className="text-white text-2xl md:text-3xl font-bold">Related Articles</h2>
+            <div className="related-section">
+              <div className="section-header">
+                <div className="section-divider"></div>
+                <h2 className="section-title">Related Articles</h2>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="related-grid">
                 {Object.values(blogPosts)
                   .filter(b => b.id !== blog.id)
                   .map((relatedBlog) => (
                     <Link 
                       key={relatedBlog.id}
                       href={`/blogs/${relatedBlog.slug}`}
-                      className="block group"
+                      className="related-card"
                     >
-                      <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-xl overflow-hidden border border-gray-800 hover:border-cyan-500 transition-all duration-500 h-full hover:shadow-xl hover:shadow-cyan-500/20">
-                        <div className="relative h-48 overflow-hidden">
+                      <div className="related-card-item">
+                        <div className="related-image-wrapper">
                           <img 
                             src={relatedBlog.image} 
                             alt={relatedBlog.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            className="related-image"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                          <div className="absolute top-4 left-4">
-                            <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold">{relatedBlog.category}</span>
+                          <div className="image-overlay"></div>
+                          <div className="category-badge-small">
+                            {relatedBlog.category}
                           </div>
                         </div>
-                        <div className="p-6">
-                          <div className="flex items-center gap-3 mb-3 text-xs text-gray-400">
-                            <span className="flex items-center gap-1.5">
-                              <i className="far fa-calendar text-cyan-400"></i>
+                        <div className="related-content">
+                          <div className="related-meta">
+                            <span className="blog-meta-item">
+                              <i className="far fa-calendar blog-meta-icon"></i>
                               {relatedBlog.date}
                             </span>
                             <span>•</span>
-                            <span className="flex items-center gap-1.5">
-                              <i className="far fa-clock text-cyan-400"></i>
+                            <span className="blog-meta-item">
+                              <i className="far fa-clock blog-meta-icon"></i>
                               {relatedBlog.readTime}
                             </span>
                           </div>
-                          <h3 className="text-white text-lg font-bold mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2 leading-tight">
+                          <h3 className="related-title">
                             {relatedBlog.title}
                           </h3>
-                          <p className="text-gray-400 text-sm line-clamp-2 leading-relaxed">{relatedBlog.excerpt}</p>
-                          <div className="mt-4 pt-4 border-t border-gray-800">
-                            <span className="text-cyan-400 text-sm font-semibold inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform">
-                              Read More <i className="fas fa-arrow-right text-xs"></i>
+                          <p className="related-excerpt">{relatedBlog.excerpt}</p>
+                          <div className="related-footer">
+                            <span className="related-read-more">
+                              Read More <i className="fas fa-arrow-right" style={{fontSize: '0.75rem'}}></i>
                             </span>
                           </div>
                         </div>
@@ -559,8 +1207,9 @@ const BlogDetailPage = () => {
         </div>
       </article>
 
-      <FooterSection />
-    </div>
+        <FooterSection />
+      </div>
+    </>
   );
 };
 

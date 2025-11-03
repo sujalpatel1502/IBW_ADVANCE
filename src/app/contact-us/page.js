@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { initNavigation } from '../../utils/navigation';
 import { initMouseCursor } from '../../utils/mouseCursor';
 import { initSmoothScroll } from '../../utils/smoothScroll';
@@ -9,6 +9,16 @@ import { safeBodyClass } from '../../utils/safeBodyClass';
 import FooterSection from '../../components/FooterSection';
 
 const ContactUsPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
+
   useEffect(() => {
     // Ensure we're on the client side
     if (typeof window === 'undefined') return;
@@ -28,9 +38,103 @@ const ContactUsPage = () => {
     }
   }, []);
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear message when user starts typing
+    if (submitMessage.text) {
+      setSubmitMessage({ type: '', text: '' });
+    }
+  };
+
+  const validateForm = () => {
+    if (!formData.name.trim()) {
+      setSubmitMessage({ type: 'error', text: 'Please enter your name' });
+      return false;
+    }
+    if (!formData.email.trim()) {
+      setSubmitMessage({ type: 'error', text: 'Please enter your email address' });
+      return false;
+    }
+    if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      setSubmitMessage({ type: 'error', text: 'Please enter a valid email address' });
+      return false;
+    }
+    if (!formData.phone.trim()) {
+      setSubmitMessage({ type: 'error', text: 'Please enter your phone number' });
+      return false;
+    }
+    if (!formData.subject.trim()) {
+      setSubmitMessage({ type: 'error', text: 'Please enter a subject' });
+      return false;
+    }
+    if (!formData.message.trim()) {
+      setSubmitMessage({ type: 'error', text: 'Please enter your message' });
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitMessage({ type: '', text: '' });
+
+    try {
+      const response = await fetch('https://api.instabizweb.com/api/leads/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          subject: formData.subject.trim(),
+          message: formData.message.trim()
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage({ type: 'success', text: data.message || 'Form submitted successfully! We will get back to you soon.' });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitMessage({ type: 'error', text: data.message || 'Failed to submit form. Please try again later.' });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage({ type: 'error', text: 'An error occurred while submitting the form. Please try again later.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="bg-dark">
       <style jsx>{`
+        /* Form Submit Button Disabled State */
+        .contact-form button:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+        
         /* Mobile Contact Form Optimizations */
         @media (max-width: 767px) {
           .contact-area {
@@ -96,6 +200,11 @@ const ContactUsPage = () => {
             padding: 12px 20px !important;
             font-size: 14px !important;
             margin-top: 10px !important;
+          }
+          
+          .contact-form button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
           }
           
           .contact-address li {
@@ -180,11 +289,20 @@ const ContactUsPage = () => {
                   <div className="contact-form-style-one">
                     <h4 className="sub-title">Have Questions?</h4>
                     <h2 className="title">Send us a Message</h2>
-                    <form action="#" method="POST" className="contact-form contact-form">
+                    <form onSubmit={handleSubmit} className="contact-form contact-form">
                       <div className="row">
                         <div className="col-lg-12">
                           <div className="form-group">
-                            <input className="form-control" id="name" name="name" placeholder="Name" type="text" />
+                            <input 
+                              className="form-control" 
+                              id="name" 
+                              name="name" 
+                              placeholder="Name *" 
+                              type="text" 
+                              value={formData.name}
+                              onChange={handleInputChange}
+                              required
+                            />
                             <span className="alert-error"></span>
                           </div>
                         </div>
@@ -192,13 +310,48 @@ const ContactUsPage = () => {
                       <div className="row">
                         <div className="col-lg-6">
                           <div className="form-group">
-                            <input className="form-control" id="email" name="email" placeholder="Email*" type="email" />
+                            <input 
+                              className="form-control" 
+                              id="email" 
+                              name="email" 
+                              placeholder="Email *" 
+                              type="email" 
+                              value={formData.email}
+                              onChange={handleInputChange}
+                              required
+                            />
                             <span className="alert-error"></span>
                           </div>
                         </div>
                         <div className="col-lg-6">
                           <div className="form-group">
-                            <input className="form-control" id="phone" name="phone" placeholder="Phone" type="text" />
+                            <input 
+                              className="form-control" 
+                              id="phone" 
+                              name="phone" 
+                              placeholder="Phone *" 
+                              type="tel" 
+                              value={formData.phone}
+                              onChange={handleInputChange}
+                              required
+                            />
+                            <span className="alert-error"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-lg-12">
+                          <div className="form-group">
+                            <input 
+                              className="form-control" 
+                              id="subject" 
+                              name="subject" 
+                              placeholder="Subject *" 
+                              type="text" 
+                              value={formData.subject}
+                              onChange={handleInputChange}
+                              required
+                            />
                             <span className="alert-error"></span>
                           </div>
                         </div>
@@ -206,20 +359,43 @@ const ContactUsPage = () => {
                       <div className="row">
                         <div className="col-lg-12">
                           <div className="form-group comments">
-                            <textarea className="form-control" id="comments" name="comments" placeholder="Tell Us About Project *"></textarea>
+                            <textarea 
+                              className="form-control" 
+                              id="message" 
+                              name="message" 
+                              placeholder="Tell Us About Project *"
+                              rows="6"
+                              value={formData.message}
+                              onChange={handleInputChange}
+                              required
+                            ></textarea>
                           </div>
                         </div>
                       </div>
                       <div className="row">
                         <div className="col-lg-12">
-                          <button type="submit" name="submit" id="submit">
-                            <i className="fa fa-paper-plane"></i> Get in Touch
+                          <button type="submit" name="submit" id="submit" disabled={isSubmitting}>
+                            <i className="fa fa-paper-plane"></i> {isSubmitting ? 'Submitting...' : 'Get in Touch'}
                           </button>
                         </div>
                       </div>
                       {/* Alert Message */}
                       <div className="col-lg-12 alert-notification">
-                        <div id="message" className="alert-msg"></div>
+                        <div 
+                          id="message" 
+                          className={`alert-msg ${submitMessage.type === 'success' ? 'success' : submitMessage.type === 'error' ? 'error' : ''}`}
+                          style={{
+                            display: submitMessage.text ? 'block' : 'none',
+                            padding: submitMessage.text ? '15px' : '0',
+                            marginTop: submitMessage.text ? '15px' : '0',
+                            borderRadius: '5px',
+                            backgroundColor: submitMessage.type === 'success' ? 'rgba(34, 197, 94, 0.1)' : submitMessage.type === 'error' ? 'rgba(239, 68, 68, 0.1)' : 'transparent',
+                            color: submitMessage.type === 'success' ? '#22c55e' : submitMessage.type === 'error' ? '#ef4444' : 'inherit',
+                            border: submitMessage.text ? `1px solid ${submitMessage.type === 'success' ? '#22c55e' : '#ef4444'}` : 'none'
+                          }}
+                        >
+                          {submitMessage.text}
+                        </div>
                       </div>
                     </form>
                   </div>

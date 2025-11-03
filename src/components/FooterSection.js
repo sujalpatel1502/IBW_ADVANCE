@@ -35,16 +35,14 @@ const FooterSection = () => {
               <div className="col-lg-5 offset-lg-1 footer-item">
                 <h4 className="widget-title">Useful Link</h4>
                 <ul className="useful-link">
-                  <li><a href="#about">About Us</a></li>
+                  <li><a href="/about-us">About Us</a></li>
                   <li><a href="/portfolio">Portfolio</a></li>
+                  <li><a href="/services">Services</a></li>
+                  <li><a href="/blogs">Blogs</a></li>
                   <li><a href="/contact-us">Contact</a></li>
-                  <li><a href="#faq">FAQS</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#terms">Term & Conditions</a></li>
-                  <li><a href="#privacy">Privacy Policy</a></li>
-                  <li><a href="#careers">Careers</a></li>
-                  <li><a href="#help">Help Desk</a></li>
-                  <li><a href="#profile">Profile</a></li>
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                  <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+                  <li><a href="/refund-policy">Refund Policy</a></li>
                 </ul>
                 <form className="newsletter style-two" action="#">
                   <input type="email" placeholder="Your Email" className="form-control" name="email" />

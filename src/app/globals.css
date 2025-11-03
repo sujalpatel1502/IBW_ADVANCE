@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&display=swap');
 
+/* Tailwind CSS will be automatically injected by @tailwindcss/postcss plugin */
+
 /* IBW Brand Colors */
 :root {
   --ibw-primary: #068ea7;
