@@ -412,7 +412,7 @@ const ContactUsPage = () => {
                         <div className="info">
                           <h4>Location</h4>
                           <p>
-                            Insta Biz Web, IT Solutions Hub<br />Ahmedabad, Gujarat, India - 380001
+                            Insta Biz Web,<br />Ahmedabad, Gujarat, India - 382424
                           </p>
                         </div>
                       </li>

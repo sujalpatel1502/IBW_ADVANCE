@@ -19,15 +19,15 @@ const FooterSection = () => {
                   <li>
                     <h4>Ahmedabad</h4>
                     <p>
-                      Insta Biz Web, IT Solutions Hub, Gujarat, India - 380001
+                      Insta Biz Web, Gujarat, India - 382424
                     </p>
                   </li>
-                  <li>
+                  {/* <li>
                     <h4>Mumbai</h4>
                     <p>
                       Business Center, Maharashtra, India - 400001
                     </p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               {/* End Single Item */}

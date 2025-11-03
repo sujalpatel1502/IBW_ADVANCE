@@ -128,7 +128,7 @@ const Header = () => {
                                 <li>
                                   <div className="content">
                                     <p>Address</p> 
-                                    <strong>Ahmedabad Gujarat, India - 380001</strong>
+                                    <strong>Ahmedabad Gujarat, India - 382424</strong>
                                   </div>
                                 </li>
                                 <li>

@@ -24,7 +24,7 @@ const HeroSection = () => {
               <div className="top-info">
                 <h4>Based In Ahmedabad</h4>
                 <p>
-                  Gujarat, India - 380001
+                  Gujarat, India - 382424
                 </p>
               </div>
               <div className="bottom">
