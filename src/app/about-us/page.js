@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import FooterSection from '../../components/FooterSection';
 import TestimonialSection from '../../components/TestimonialSection';
 
 const AboutUsPage = () => {
   const [activeTab, setActiveTab] = useState('tab1');
+  const swiperInstancesRef = useRef({});
 
   useEffect(() => {
     // Ensure we're on the client side
@@ -146,31 +147,56 @@ const AboutUsPage = () => {
     // Initialize Team Swipers
     const initTeamSwipers = () => {
       if (window.Swiper) {
-        // Initialize all team swipers
-        const teamSwipers = ['.teamSwiper1', '.teamSwiper2', '.teamSwiper3'];
-        
-        teamSwipers.forEach((swiperClass, index) => {
-          new window.Swiper(swiperClass, {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            loop: false,
-            autoplay: false,
-            breakpoints: {
-              320: {
-                slidesPerView: 2,
-                spaceBetween: 15,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
+        // Founder swiper (1 slide)
+        const founderSwiper = new window.Swiper('.teamSwiper1', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: false,
+          autoplay: false,
+          centeredSlides: true,
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 15,
             },
-          });
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+          },
         });
+        swiperInstancesRef.current.teamSwiper1 = founderSwiper;
+        
+        // Founding Team swiper (2 slides with infinite loop - faster, 6 co-founders)
+        const teamSwiper2 = new window.Swiper('.teamSwiper2', {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          loop: true,
+          autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+          },
+          speed: 800,
+          breakpoints: {
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          },
+        });
+        swiperInstancesRef.current.teamSwiper2 = teamSwiper2;
       }
     };
     
@@ -178,30 +204,49 @@ const AboutUsPage = () => {
     setTimeout(initTeamSwipers, 300);
   }, []);
 
+  // Restart autoplay when tab changes
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const restartAutoplay = () => {
+      // Stop autoplay first
+      if (swiperInstancesRef.current.teamSwiper2) {
+        swiperInstancesRef.current.teamSwiper2.autoplay.stop();
+      }
+      
+      // Small delay to ensure swiper is visible, then start the active one
+      setTimeout(() => {
+        if (activeTab === 'tab2' && swiperInstancesRef.current.teamSwiper2) {
+          swiperInstancesRef.current.teamSwiper2.autoplay.start();
+        }
+      }, 150);
+    };
+    
+    restartAutoplay();
+  }, [activeTab]);
+
   const teamMembers = {
     tab1: [
-      { name: 'James Baker', position: 'CEO & Founder', image: '/team/1.jpg' },
-      { name: 'Dalton Grant', position: 'Chairman', image: '/team/2.jpg' },
-      { name: 'Ryan Ricketts', position: 'Manager', image: '/team/3.jpg' }
+      { name: 'Mukund Pasi', position: 'Founder', image: '/team/mukund.png' }
     ],
     tab2: [
-      { name: 'Danny Russell', position: 'Head of marketing', image: '/team/4.jpg' },
-      { name: 'James Baker', position: 'Product Developer', image: '/team/5.jpg' },
-      { name: 'Sark Hunnen', position: 'Project manager', image: '/team/6.jpg' }
-    ],
-    tab3: [
-      { name: 'Rusa Jinuh', position: 'Web Developer', image: '/team/7.jpg' },
-      { name: 'Dalton Grant', position: 'UI Designer', image: '/team/8.jpg' },
-      { name: 'Megh Grant', position: 'Content Creator', image: '/team/9.jpg' }
+      { name: 'Harshil Sarariya', position: 'Co-Founder', image: '/team/harshil.png' },
+      { name: 'Miraj Soliya', position: 'Co-Founder', image: '/team/miraj.png' },
+      { name: 'Sujal Patel', position: 'Co-Founder', image: '/team/sujal.png' },
+      { name: 'Neel Soni', position: 'Co-Founder', image: '/team/neel.png' },
+      { name: 'Gaurav Teli', position: 'Co-Founder', image: '/team/gaurav.png' },
+      { name: 'Dhaval Chavda', position: 'Co-Founder', image: '/team/dhaval.png' }
     ]
   };
 
   const partners = [
-    { category: 'Tech', name: 'access.org', image: '/brand/2.png' },
-    { category: 'Solution', name: 'nexttech.it', image: '/brand/3.png' },
-    { category: 'Brand', name: 'teamapt.tech', image: '/brand/4.png' },
-    { category: 'Tech', name: 'muaast.io', image: '/brand/5.png' },
-    { category: 'Design', name: 'wattse.com', image: '/brand/12.png' }
+    { category: 'AI Platform', name: 'BluTec', image: '/brand/blutec.png' },
+    { category: 'Healthcare', name: 'Carefix', image: '/brand/carefix.png' },
+    { category: 'Fintech', name: 'Cashflex', image: '/brand/cashflex.png' },
+    { category: 'Transportation', name: 'Chennai Cabs', image: '/brand/chennai-cabs.png' },
+    { category: 'Real Estate', name: 'Estate Rent', image: '/brand/estate-rent.png' },
+    { category: 'B2B', name: 'Kabadi King', image: '/brand/kabaddi-king.png' },
+    { category: 'Education', name: 'Sarvam Art', image: '/brand/serverm-art.png' }
   ];
 
   return (
@@ -349,10 +394,14 @@ const AboutUsPage = () => {
         }
         
         .partner-two-item img {
-          max-height: 40px;
+          max-height: 120px;
+          max-width: 280px;
+          width: auto;
+          height: auto;
           margin-bottom: 20px;
           filter: brightness(0) invert(1);
           transition: all 0.3s ease;
+          object-fit: contain;
         }
         
         .partner-two-item:hover img {
@@ -439,6 +488,57 @@ const AboutUsPage = () => {
             margin-top: 0 !important;
           }
         }
+        
+        /* Founder Single Card Styling */
+        .teamSwiper1 .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .teamSwiper1 .team-style-one-item {
+          margin: 0 auto;
+          max-width: 400px;
+          width: 100%;
+        }
+        
+        @media (max-width: 767px) {
+          .teamSwiper1 .team-style-one-item {
+            max-width: 300px;
+          }
+        }
+        
+        /* Team Member Images */
+        .team-style-one-item .thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        
+        /* Co-Founders Layout */
+        .teamSwiper2 .swiper-wrapper,
+        .teamSwiper3 .swiper-wrapper {
+          display: flex;
+          align-items: stretch;
+        }
+        
+        .teamSwiper2 .team-style-one-item,
+        .teamSwiper3 .team-style-one-item {
+          height: 100%;
+        }
+        
+        /* Ensure images don't get cut off */
+        .team-style-one-item .thumb {
+          overflow: hidden;
+        }
+        
+        .team-style-one-item .thumb img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          display: block;
+        }
       `}</style>
       {/* Start Preloader */}
       <div id="preloader">
@@ -481,10 +581,10 @@ const AboutUsPage = () => {
                   <div className="info">
                     <div className="d-flex">
                       <a href="#"><img src="/icon/arrow.png" alt="Image Not Found" /></a>
-                      <h2 className="title text">Best creative & digital agency</h2>
+                      <h2 className="title text">Best creative & automation agency</h2>
                     </div>
                     <p className="text">
-                      Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably
+                      We specialize in delivering cutting-edge IT services, innovative AI tools, intelligent automation solutions, and comprehensive social media marketing strategies. Our expertise helps businesses streamline operations, enhance productivity, and achieve digital transformation goals with modern technology solutions.
                     </p>
                   </div>
                   <ul className="service-list">
@@ -494,7 +594,7 @@ const AboutUsPage = () => {
                           <i className="fas fa-long-arrow-right"></i>
                         </div>
                         <span>01</span>
-                        Social Media
+                        IT Services
                       </a>
                     </li>
                     <li>
@@ -503,7 +603,7 @@ const AboutUsPage = () => {
                           <i className="fas fa-long-arrow-right"></i>
                         </div>
                         <span>02</span>
-                        Content Writing
+                        AI Tools
                       </a>
                     </li>
                     <li>
@@ -512,7 +612,16 @@ const AboutUsPage = () => {
                           <i className="fas fa-long-arrow-right"></i>
                         </div>
                         <span>03</span>
-                        Video Production
+                        Automations
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div className="icon">
+                          <i className="fas fa-long-arrow-right"></i>
+                        </div>
+                        <span>04</span>
+                        Social Media Marketing
                       </a>
                     </li>
                   </ul>
@@ -532,8 +641,8 @@ const AboutUsPage = () => {
                   {/* Single item */}
                   <div className="fun-fact wow fadeInDown">
                     <div className="counter">
-                      <div className="timer">360</div>
-                      <div className="operator">K</div>
+                      <div className="timer">60</div>
+                      <div className="operator">+</div>
                     </div>
                     <span className="medium">World Customer</span>
                   </div>
@@ -550,7 +659,7 @@ const AboutUsPage = () => {
                   {/* Single item */}
                   <div className="fun-fact wow fadeInDown">
                     <div className="counter">
-                      <div className="timer">874</div>
+                      <div className="timer">2</div>
                       <div className="operator">+</div>
                     </div>
                     <span className="medium">Total Branch</span>
@@ -559,7 +668,7 @@ const AboutUsPage = () => {
                   {/* Single item */}
                   <div className="fun-fact wow fadeInUp" data-wow-duration="0.5s">
                     <div className="counter">
-                      <div className="timer">35</div>
+                      <div className="timer">5</div>
                     </div>
                     <span className="medium">Years experience</span>
                   </div>
@@ -582,10 +691,10 @@ const AboutUsPage = () => {
               </div>
               <div className="col-lg-6">
                 <div className="brand-style-two-items">
-                  <h4 className="sub-title">Our Partner</h4>
-                  <h2 className="title">Our Trusted Partner.</h2>
+                  <h4 className="sub-title">Networks</h4>
+                  <h2 className="title">Our Networks</h2>
                   <p>
-                    Perceived determine departure explained no forfeite. Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an
+                    We are proud to work with leading brands across various industries including AI platforms, healthcare, fintech, transportation, real estate, and education. Our partners trust us for innovative app development, custom CRM solutions, AI automation tools, and comprehensive digital transformation services that drive their business growth.
                   </p>
                   <div className="partner-slider mt-40">
                     <div className="swiper partnerSwiper">
@@ -634,8 +743,8 @@ const AboutUsPage = () => {
                         onClick={() => setActiveTab('tab1')}
                         type="button"
                       >
-                        <strong>Managing Director</strong>
-                        <span>Head of department</span>
+                        <strong>Founder</strong>
+                        <span>Leadership</span>
                       </button>
                     </li>
                     <li className="nav-item" role="presentation">
@@ -644,18 +753,8 @@ const AboutUsPage = () => {
                         onClick={() => setActiveTab('tab2')}
                         type="button"
                       >
-                        <strong>Marketing Manager</strong>
-                        <span>Sales Department</span>
-                      </button>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                      <button 
-                        className={`nav-link ${activeTab === 'tab3' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('tab3')}
-                        type="button"
-                      >
-                        <strong>Software Developer</strong>
-                        <span>App Department</span>
+                        <strong>Founding Team</strong>
+                        <span>Co-Founders</span>
                       </button>
                     </li>
                   </ul>
@@ -685,25 +784,6 @@ const AboutUsPage = () => {
                       <div className="team-style-one-carousel swiper teamSwiper2">
                         <div className="swiper-wrapper">
                           {teamMembers.tab2.map((member, index) => (
-                            <div key={index} className="swiper-slide">
-                              <div className="team-style-one-item">
-                                <div className="thumb">
-                                  <img src={member.image} alt="Image Not Found" />
-                                </div>
-                                <div className="info">
-                                  <h4><a href="#">{member.name}</a></h4>
-                                  <span>{member.position}</span>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className={`tab-pane fade ${activeTab === 'tab3' ? 'show active' : ''}`}>
-                      <div className="team-style-one-carousel swiper teamSwiper3">
-                        <div className="swiper-wrapper">
-                          {teamMembers.tab3.map((member, index) => (
                             <div key={index} className="swiper-slide">
                               <div className="team-style-one-item">
                                 <div className="thumb">

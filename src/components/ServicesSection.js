@@ -21,30 +21,30 @@ const ServicesSection = () => {
               <ul>
                 <li className="item-move-top-item" style={{backgroundImage: 'url(/shape/5.png)'}}>
                   <div className="icon">
-                    <img src="/icon/9.png" alt="Icon" />
+                    <img src="/icon/10.png" alt="Icon" />
                   </div>
                   <div className="details">
                     <div className="item-title">
-                      <span>Connection</span>
-                      <h3><a href="/services">Perfect UI/UX Designing</a></h3>
+                      <span>Marketing</span>
+                      <h3><a href="/services">Social Media Marketing</a></h3>
                     </div>
                     <p>
-                      Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new.
+                      Facebook Ads management, WhatsApp broadcasting, content creation, and complete social media handling across all platforms.
                     </p>
                     <span>01</span>
                   </div>
                 </li>
                 <li className="item-move-top-item" style={{backgroundImage: 'url(/shape/5.png)'}}>
                   <div className="icon">
-                    <img src="/icon/10.png" alt="Icon" />
+                    <img src="/icon/9.png" alt="Icon" />
                   </div>
                   <div className="details">
                     <div className="item-title">
-                      <span>Collaboration</span>
-                      <h3><a href="/services">Social Media Marketing</a></h3>
+                      <span>Development</span>
+                      <h3><a href="/services">Website & App Development</a></h3>
                     </div>
                     <p>
-                      Regular indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new.
+                      Responsive websites and feature-rich mobile applications built with modern technologies to deliver exceptional user experiences.
                     </p>
                     <span>02</span>
                   </div>
@@ -55,13 +55,28 @@ const ServicesSection = () => {
                   </div>
                   <div className="details">
                     <div className="item-title">
-                      <span>Innovations</span>
-                      <h3><a href="/services">Branding & Stationery</a></h3>
+                      <span>Innovation</span>
+                      <h3><a href="/services">AI Products & Automation</a></h3>
                     </div>
                     <p>
-                      Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new.
+                      Process automation, intelligent chatbots, predictive analytics, machine learning models, and custom AI solutions for your business.
                     </p>
                     <span>03</span>
+                  </div>
+                </li>
+                <li className="item-move-top-item" style={{backgroundImage: 'url(/shape/5.png)'}}>
+                  <div className="icon">
+                    <img src="/icon/12.png" alt="Icon" />
+                  </div>
+                  <div className="details">
+                    <div className="item-title">
+                      <span>Management</span>
+                      <h3><a href="/services">CRM Solutions</a></h3>
+                    </div>
+                    <p>
+                      Odoo ERP implementation, custom CRM development, and integration services to optimize your sales, marketing, and customer workflows.
+                    </p>
+                    <span>04</span>
                   </div>
                 </li>
               </ul>

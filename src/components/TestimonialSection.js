@@ -4,6 +4,22 @@ const TestimonialSection = () => {
   return (
     <>
       <style jsx>{`
+        /* User Icon Styling */
+        .tm-provider .user-icon {
+          width: 50px;
+          height: 50px;
+          margin-right: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 36px;
+          color: var(--color-primary);
+        }
+        
+        .bg-dark .tm-provider .user-icon {
+          color: var(--white);
+        }
+        
         /* Mobile Testimonial Cards Styling */
         @media (max-width: 767px) {
           .testimonial-style-three-item {
@@ -34,11 +50,16 @@ const TestimonialSection = () => {
             align-items: center !important;
           }
           
-          .tm-provider img {
+          .tm-provider .user-icon {
             width: 40px !important;
             height: 40px !important;
             margin-right: 12px !important;
             margin-bottom: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 24px !important;
+            color: var(--color-primary) !important;
           }
           
           .tm-provider h4 {
@@ -119,7 +140,7 @@ const TestimonialSection = () => {
           <div className="col-lg-12">
             <div className="testimonial-style-three-carousel swiper">
               <div className="swiper-wrapper">
-                {/* Single Item */}
+                {/* Single Item - BluTec */}
                 <div className="swiper-slide">
                   <div className="testimonial-style-three-item">
                     <div className="tes-rating">
@@ -133,20 +154,51 @@ const TestimonialSection = () => {
                       </div>
                     </div>
                     <p>
-                      IBW delivered exceptional results for our digital transformation project. Their team's expertise in modern technologies and attention to detail exceeded our expectations. The project was completed on time and within budget.
+                      IBW transformed our AI automation platform with cutting-edge solutions. Their expertise in AI tools and automation helped us scale efficiently. The team delivered exceptional results that exceeded our expectations.
                     </p>
                     <div className="tm-provider">
-                      <img src="/team/11.jpg" alt="Image Not Found" />
+                      <div className="user-icon">
+                        <i className="fas fa-user-circle"></i>
+                      </div>
                       <div>
-                        <h4>Sarah Johnson</h4>
-                        <span>Tech Startup CEO</span>
+                        <h4>Rahul Shah</h4>
+                        <span>BluTec AI - CTO</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 {/* End Single Item */}
 
-                {/* Single Item */}
+                {/* Single Item - Carefix */}
+                <div className="swiper-slide">
+                  <div className="testimonial-style-three-item">
+                    <div className="tes-rating">
+                      <span>5.0</span>
+                      <div className="icon">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p>
+                      IBW developed a comprehensive healthcare management system for us. Their attention to detail and understanding of healthcare workflows made a significant impact on our patient care services.
+                    </p>
+                    <div className="tm-provider">
+                      <div className="user-icon">
+                        <i className="fas fa-user-circle"></i>
+                      </div>
+                      <div>
+                        <h4>Dr. Arjun Mehta</h4>
+                        <span>Carefix - CEO</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* End Single Item */}
+
+                {/* Single Item - Cashflex */}
                 <div className="swiper-slide">
                   <div className="testimonial-style-three-item">
                     <div className="tes-rating">
@@ -160,20 +212,22 @@ const TestimonialSection = () => {
                       </div>
                     </div>
                     <p>
-                      Working with IBW has been a game-changer for our business. Their innovative solutions and professional approach helped us streamline our operations and improve our customer experience significantly.
+                      Working with IBW on our fintech platform was seamless. They delivered a robust payment solution that handles high transaction volumes. Their technical expertise and professional approach are unmatched.
                     </p>
                     <div className="tm-provider">
-                      <img src="/team/12.jpg" alt="Image Not Found" />
+                      <div className="user-icon">
+                        <i className="fas fa-user-circle"></i>
+                      </div>
                       <div>
-                        <h4>Michael Chen</h4>
-                        <span>Enterprise Solutions Director</span>
+                        <h4>Rajesh Kumar</h4>
+                        <span>Cashflex - CTO</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 {/* End Single Item */}
 
-                {/* Single Item */}
+                {/* Single Item - Chennai Cabs */}
                 <div className="swiper-slide">
                   <div className="testimonial-style-three-item">
                     <div className="tes-rating">
@@ -187,13 +241,102 @@ const TestimonialSection = () => {
                       </div>
                     </div>
                     <p>
-                      IBW's team demonstrated outstanding technical skills and creativity in developing our custom software solution. Their communication throughout the project was excellent, and the final product exceeded our requirements.
+                      IBW built our ride-hailing app that now has 10K+ downloads and 4-5K active users. Their mobile app development skills and understanding of transportation tech helped us create a successful platform.
                     </p>
                     <div className="tm-provider">
-                      <img src="/team/11.jpg" alt="Image Not Found" />
+                      <div className="user-icon">
+                        <i className="fas fa-user-circle"></i>
+                      </div>
                       <div>
-                        <h4>Emily Rodriguez</h4>
-                        <span>Product Manager</span>
+                        <h4>Vikram Singh</h4>
+                        <span>Chennai Cabs - Co-Founder</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* End Single Item */}
+
+                {/* Single Item - Estate Rent */}
+                <div className="swiper-slide">
+                  <div className="testimonial-style-three-item">
+                    <div className="tes-rating">
+                      <span>4.9</span>
+                      <div className="icon">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p>
+                      IBW developed our real estate platform that manages property listings efficiently. Their web development expertise and modern design approach helped us create an excellent user experience for our clients.
+                    </p>
+                    <div className="tm-provider">
+                      <div className="user-icon">
+                        <i className="fas fa-user-circle"></i>
+                      </div>
+                      <div>
+                        <h4>Neha Desai</h4>
+                        <span>Estate Rent - Director</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* End Single Item */}
+
+                {/* Single Item - Kabadi King */}
+                <div className="swiper-slide">
+                  <div className="testimonial-style-three-item">
+                    <div className="tes-rating">
+                      <span>5.0</span>
+                      <div className="icon">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p>
+                      IBW helped us build our B2B platform with excellent automation tools. Their CRM solutions and custom development helped streamline our business operations. Highly professional team with great communication.
+                    </p>
+                    <div className="tm-provider">
+                      <div className="user-icon">
+                        <i className="fas fa-user-circle"></i>
+                      </div>
+                      <div>
+                        <h4>Amit Joshi</h4>
+                        <span>Kabadi King - Managing Director</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* End Single Item */}
+
+                {/* Single Item - Sarvam Art */}
+                <div className="swiper-slide">
+                  <div className="testimonial-style-three-item">
+                    <div className="tes-rating">
+                      <span>5.0</span>
+                      <div className="icon">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p>
+                      IBW developed our student management system that transformed how we manage coaching centers. The Odoo CRM implementation was flawless, and their ongoing support has been exceptional. Highly recommended!
+                    </p>
+                    <div className="tm-provider">
+                      <div className="user-icon">
+                        <i className="fas fa-user-circle"></i>
+                      </div>
+                      <div>
+                        <h4>Priya Reddy</h4>
+                        <span>Sarvam Art - Principal</span>
                       </div>
                     </div>
                   </div>

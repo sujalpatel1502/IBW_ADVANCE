@@ -126,6 +126,15 @@ const ServicesPage = () => {
           background: #130f12 !important;
         }
         
+        /* Desktop Logo Sizing - Make logos bigger */
+        .client-style-one-item img {
+          max-height: 120px !important;
+          max-width: 280px !important;
+          width: auto !important;
+          height: auto !important;
+          object-fit: contain !important;
+        }
+        
         /* Mobile Clients - 2 cards per row */
         @media (max-width: 767px) {
           .client-style-one-items {
@@ -145,7 +154,7 @@ const ServicesPage = () => {
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
-            min-height: 80px !important;
+            min-height: 120px !important;
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
             border-right: none !important;
             border-bottom: none !important;
@@ -170,8 +179,10 @@ const ServicesPage = () => {
           }
           
           .client-style-one-item img {
-            max-width: 80px !important;
-            max-height: 40px !important;
+            max-width: 180px !important;
+            max-height: 90px !important;
+            width: auto !important;
+            height: auto !important;
             object-fit: contain !important;
           }
           
@@ -341,8 +352,8 @@ const ServicesPage = () => {
                   {/* Single item */}
                   <div className="fun-fact">
                     <div className="counter">
-                      <div className="timer">360</div>
-                      <div className="operator">K</div>
+                      <div className="timer">60</div>
+                      <div className="operator">+</div>
                     </div>
                     <span className="medium">World Customer</span>
                   </div>
@@ -361,7 +372,7 @@ const ServicesPage = () => {
                   {/* Single item */}
                   <div className="fun-fact">
                     <div className="counter">
-                      <div className="timer">874</div>
+                      <div className="timer">2</div>
                       <div className="operator">+</div>
                     </div>
                     <span className="medium">Total Branch</span>
@@ -371,7 +382,7 @@ const ServicesPage = () => {
                   {/* Single item */}
                   <div className="fun-fact">
                     <div className="counter">
-                      <div className="timer">35</div>
+                      <div className="timer">5</div>
                     </div>
                     <span className="medium">Years experience</span>
                   </div>
@@ -419,43 +430,43 @@ const ServicesPage = () => {
                   
                   {/* Single Item */}
                   <div className="client-style-one-item">
-                    <img src="/brand/10.png" alt="Image Not Found" />
+                    <img src="/brand/blutec.png" alt="Blutec" />
                   </div>
                   {/* End Single Item */}
                   
                   {/* Single Item */}
                   <div className="client-style-one-item">
-                    <img src="/brand/2.png" alt="Image Not Found" />
+                    <img src="/brand/carefix.png" alt="Carefix" />
                   </div>
                   {/* End Single Item */}
                   
                   {/* Single Item */}
                   <div className="client-style-one-item">
-                    <img src="/brand/3.png" alt="Image Not Found" />
+                    <img src="/brand/cashflex.png" alt="Cashflex" />
                   </div>
                   {/* End Single Item */}
                   
                   {/* Single Item */}
                   <div className="client-style-one-item">
-                    <img src="/brand/4.png" alt="Image Not Found" />
+                    <img src="/brand/chennai-cabs.png" alt="Chennai Cabs" />
                   </div>
                   {/* End Single Item */}
                   
                   {/* Single Item */}
                   <div className="client-style-one-item">
-                    <img src="/brand/8.png" alt="Image Not Found" />
+                    <img src="/brand/estate-rent.png" alt="Estate Rent" />
                   </div>
                   {/* End Single Item */}
                   
                   {/* Single Item */}
                   <div className="client-style-one-item">
-                    <img src="/brand/6.png" alt="Image Not Found" />
+                    <img src="/brand/kabaddi-king.png" alt="Kabaddi King" />
                   </div>
                   {/* End Single Item */}
                   
                   {/* Single Item */}
                   <div className="client-style-one-item">
-                    <img src="/brand/7.png" alt="Image Not Found" />
+                    <img src="/brand/serverm-art.png" alt="Serverm Art" />
                   </div>
                   {/* End Single Item */}
                   
@@ -492,9 +503,8 @@ const ServicesPage = () => {
                     <div className="left">
                       <div className="info">
                         <h4>Web Development Package</h4>
-                        <span>15 Days Free Trial</span>
                       </div>
-                      <h2><sup>₹</sup>2,60,000</h2>
+                      <h2><sup>₹</sup>50,000</h2>
                       <a className="btn btn-sm circle btn-gradient effect" href="/contact-us">Order Now</a>
                     </div>
                     <div className="right">
@@ -514,9 +524,8 @@ const ServicesPage = () => {
                     <div className="left">
                       <div className="info">
                         <h4>Complete Digital Solution</h4>
-                        <span>30 Days Free Trial</span>
                       </div>
-                      <h2><sup>₹</sup>5,20,000</h2>
+                      <h2><sup>₹</sup>1,00,000</h2>
                       <a className="btn btn-sm circle btn-light effect" href="/contact-us">Order Now</a>
                     </div>
                     <div className="right">

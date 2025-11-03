@@ -33,6 +33,11 @@ export const initSmoothScroll = () => {
       link.addEventListener('click', (e) => {
         const targetId = link.getAttribute('href');
         
+        // Skip if href is external URL or mailto link
+        if (targetId && (targetId.startsWith('http://') || targetId.startsWith('https://') || targetId.startsWith('mailto:'))) {
+          return; // Allow default behavior for external links
+        }
+        
         // Only handle valid selectors (not just "#")
         if (targetId && targetId !== '#' && targetId.startsWith('#')) {
           e.preventDefault();

@@ -64,9 +64,10 @@ const Header = () => {
                 </div>
                 <div className="right-info">
                   <ul>
-                    <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><img src="/icon/twitter.png" alt="Image Not Found" /></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61578562181866" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/insta_biz_web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/instabizweb" target="_blank" rel="noopener noreferrer"><img src="/icon/twitter.png" alt="Image Not Found" /></a></li>
+                    <li><a href="https://www.linkedin.com/company/insta-biz-web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -113,6 +114,7 @@ const Header = () => {
                               <li><a href="/services">Services</a></li>
                               <li><a href="/about-us">About Us</a></li>
                               <li><a href="/portfolio">Portfolio</a></li>
+                              <li><a href="/blogs">Blogs</a></li>
                               <li><a href="/contact-us">Contact</a></li>
                             </ul>
                           </div>
@@ -159,10 +161,10 @@ const Header = () => {
                           </div>
                           <div className="widget social">
                             <ul className="link">
-                              <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                              <li><a href="#"><img src="/icon/twitter.png" alt="Image Not Found" /></a></li>
-                              <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                              <li><a href="#"><i className="fab fa-behance"></i></a></li>
+                              <li><a href="https://www.facebook.com/profile.php?id=61578562181866" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
+                              <li><a href="https://www.instagram.com/insta_biz_web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
+                              <li><a href="https://x.com/instabizweb" target="_blank" rel="noopener noreferrer"><img src="/icon/twitter.png" alt="Image Not Found" /></a></li>
+                              <li><a href="https://www.linkedin.com/company/insta-biz-web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
                             </ul>
                           </div>
                         </div>

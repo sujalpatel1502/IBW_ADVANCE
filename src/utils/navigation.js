@@ -47,17 +47,30 @@ export const initializeNavigation = () => {
   anchorLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
-      if (href !== '#' && href.length > 1) {
+      // Skip if href is external URL or mailto link
+      if (href && (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:'))) {
+        return; // Allow default behavior for external links
+      }
+      if (href !== '#' && href.length > 1 && href.startsWith('#')) {
         e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          const headerHeight = document.querySelector('.navbar')?.offsetHeight || 0;
-          const targetPosition = target.offsetTop - headerHeight - 20;
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
+        try {
+          const target = document.querySelector(href);
+          if (target) {
+            const headerHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+            const targetPosition = target.offsetTop - headerHeight - 20;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        } catch (error) {
+          console.warn('Invalid selector for smooth scroll:', href);
+          // If it's an external link somehow, allow default behavior
+          if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
+            e.stopPropagation();
+            return false;
+          }
         }
       }
     });

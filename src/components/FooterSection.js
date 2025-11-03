@@ -64,9 +64,10 @@ const FooterSection = () => {
             <div className="row">
               <div className="col-lg-6">
                 <ul className="footer-social">
-                  <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="#"><img src="/icon/twitter.png" alt="Image Not Found" /></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=61578562181866" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.instagram.com/insta_biz_web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
+                  <li><a href="https://x.com/instabizweb" target="_blank" rel="noopener noreferrer"><img src="/icon/twitter.png" alt="Image Not Found" /></a></li>
+                  <li><a href="https://www.linkedin.com/company/insta-biz-web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
                 </ul>
               </div>
               <div className="col-lg-6 text-end">
