@@ -406,7 +406,7 @@ const ContactUsPage = () => {
                   <div className="contact-style-one-info">
                     <ul className="contact-address">
                       <li>
-                        <a className="phone-link" href="tel:+919876543210"><i className="fas fa-user-headset"></i> +91 98765 43210</a>
+                        <a className="phone-link" href="tel:+919876543210"><i className="fas fa-user-headset"></i> +91 98981 24987</a>
                       </li>
                       <li>
                         <div className="info">
