@@ -1,478 +1,118 @@
-'use client';
+import Script from "next/script";
+import ContactUS from "./ContactUS";
 
-import React, { useEffect, useState } from 'react';
-import { initNavigation } from '../../utils/navigation';
-import { initMouseCursor } from '../../utils/mouseCursor';
-import { initSmoothScroll } from '../../utils/smoothScroll';
-import Header from '../../components/Header';
-import { safeBodyClass } from '../../utils/safeBodyClass';
-import FooterSection from '../../components/FooterSection';
-
-const ContactUsPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
-
-  useEffect(() => {
-    // Ensure we're on the client side
-    if (typeof window === 'undefined') return;
-    
-    initNavigation();
-    initMouseCursor();
-    initSmoothScroll();
-    
-    // Hide preloader when page loads
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-      setTimeout(() => {
-        preloader.style.opacity = '0';
-        preloader.style.visibility = 'hidden';
-        safeBodyClass.add('loaded');
-      }, 1000);
-    }
-  }, []);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    // Clear message when user starts typing
-    if (submitMessage.text) {
-      setSubmitMessage({ type: '', text: '' });
-    }
-  };
-
-  const validateForm = () => {
-    if (!formData.name.trim()) {
-      setSubmitMessage({ type: 'error', text: 'Please enter your name' });
-      return false;
-    }
-    if (!formData.email.trim()) {
-      setSubmitMessage({ type: 'error', text: 'Please enter your email address' });
-      return false;
-    }
-    if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      setSubmitMessage({ type: 'error', text: 'Please enter a valid email address' });
-      return false;
-    }
-    if (!formData.phone.trim()) {
-      setSubmitMessage({ type: 'error', text: 'Please enter your phone number' });
-      return false;
-    }
-    if (!formData.subject.trim()) {
-      setSubmitMessage({ type: 'error', text: 'Please enter a subject' });
-      return false;
-    }
-    if (!formData.message.trim()) {
-      setSubmitMessage({ type: 'error', text: 'Please enter your message' });
-      return false;
-    }
-    return true;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitMessage({ type: '', text: '' });
-
-    try {
-      const response = await fetch('https://api.instabizweb.com/api/leads/create', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          phone: formData.phone.trim(),
-          subject: formData.subject.trim(),
-          message: formData.message.trim()
-        })
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setSubmitMessage({ type: 'success', text: data.message || 'Form submitted successfully! We will get back to you soon.' });
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: ''
-        });
-      } else {
-        setSubmitMessage({ type: 'error', text: data.message || 'Failed to submit form. Please try again later.' });
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitMessage({ type: 'error', text: 'An error occurred while submitting the form. Please try again later.' });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  return (
-    <div className="bg-dark">
-      <style jsx>{`
-        /* Form Submit Button Disabled State */
-        .contact-form button:disabled {
-          opacity: 0.6;
-          cursor: not-allowed;
-        }
-        
-        /* Mobile Contact Form Optimizations */
-        @media (max-width: 767px) {
-          .contact-area {
-            padding: 30px 0 !important;
-          }
-          
-          .contact-style-one-items {
-            margin: 0 !important;
-            padding: 10px !important;
-          }
-          
-          .contact-style-one-items .row {
-            margin: 0 !important;
-          }
-          
-          .col-tact-stye-one {
-            width: 100% !important;
-            max-width: 100% !important;
-            padding: 0 15px !important;
-          }
-          
-          .contact-style-one-info {
-            margin-bottom: 25px !important;
-            padding: 25px !important;
-            background: rgba(255, 255, 255, 0.05) !important;
-            border-radius: 10px !important;
-          }
-          
-          .contact-form-style-one {
-            padding: 25px !important;
-            background: rgba(255, 255, 255, 0.05) !important;
-            border-radius: 10px !important;
-            margin-bottom: 30px !important;
-          }
-          
-          .contact-form-style-one h4 {
-            font-size: 16px !important;
-            margin-bottom: 10px !important;
-          }
-          
-          .contact-form-style-one h2 {
-            font-size: 24px !important;
-            margin-bottom: 20px !important;
-          }
-          
-          .form-group {
-            margin-bottom: 20px !important;
-          }
-          
-          .form-control {
-            padding: 15px 18px !important;
-            font-size: 14px !important;
-            height: auto !important;
-            border-radius: 8px !important;
-          }
-          
-          .form-group.comments textarea {
-            min-height: 100px !important;
-            resize: vertical !important;
-          }
-          
-          .contact-form button {
-            padding: 12px 20px !important;
-            font-size: 14px !important;
-            margin-top: 10px !important;
-          }
-          
-          .contact-form button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-          }
-          
-          .contact-address li {
-            margin-bottom: 15px !important;
-            padding: 10px 0 !important;
-          }
-          
-          .contact-address .info h4 {
-            font-size: 14px !important;
-            margin-bottom: 5px !important;
-          }
-          
-          .contact-address .info p,
-          .contact-address .info a {
-            font-size: 13px !important;
-            line-height: 1.4 !important;
-          }
-          
-          .social-link {
-            justify-content: center !important;
-            margin-top: 10px !important;
-          }
-          
-          .social-link li {
-            margin: 0 8px !important;
-          }
-          
-          .social-link a {
-            width: 35px !important;
-            height: 35px !important;
-            line-height: 35px !important;
-            font-size: 14px !important;
-          }
-          
-          /* Reduce map height on mobile */
-          .maps-area .google-maps iframe {
-            height: 250px !important;
-          }
-        }
-      `}</style>
-      {/* Mouse Following Dot */}
-      <div className="cursor"></div>
-      
-      {/* Preloader */}
-      <div id="preloader">
-        <div className="dixor-loader-wrap">
-          <div className="dixor-loader-inner">
-            <div className="dixor-loader">
-              <span className="dixor-loader-item"></span>
-              <span className="dixor-loader-item"></span>
-              <span className="dixor-loader-item"></span>
-              <span className="dixor-loader-item"></span>
-              <span className="dixor-loader-item"></span>
-              <span className="dixor-loader-item"></span>
-              <span className="dixor-loader-item"></span>
-              <span className="dixor-loader-item"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="smooth-scroll-container">
-        {/* Header */}
-        <Header />
-        
-        {/* Start Breadcrumb */}
-        <div className="breadcrumb-area text-center" style={{backgroundImage: 'url(/shape/10.jpg)'}}>
-          <div className="light-banner-active bg-gray bg-cover" style={{backgroundImage: 'url(/shape/6.jpg)'}}></div>
-                <div className="mt-20 breadcrumb-content">
-                  <h1>Get In Touch</h1>
-          </div>
-        </div>
-        {/* End Breadcrumb */}
-
-        {/* Start Contact Us */}
-        <div className="contact-area relative">
-          <div className="container">
-            <div className="contact-style-one-items">
-              <div className="row">
-                {/* Form Card - First on Mobile */}
-                <div className="col-tact-stye-one col-lg-7 offset-lg-1 order-1 order-lg-2">
-                  <div className="contact-form-style-one">
-                    <h4 className="sub-title">Have Questions?</h4>
-                    <h2 className="title">Send us a Message</h2>
-                    <form onSubmit={handleSubmit} className="contact-form contact-form">
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <div className="form-group">
-                            <input 
-                              className="form-control" 
-                              id="name" 
-                              name="name" 
-                              placeholder="Name *" 
-                              type="text" 
-                              value={formData.name}
-                              onChange={handleInputChange}
-                              required
-                            />
-                            <span className="alert-error"></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-lg-6">
-                          <div className="form-group">
-                            <input 
-                              className="form-control" 
-                              id="email" 
-                              name="email" 
-                              placeholder="Email *" 
-                              type="email" 
-                              value={formData.email}
-                              onChange={handleInputChange}
-                              required
-                            />
-                            <span className="alert-error"></span>
-                          </div>
-                        </div>
-                        <div className="col-lg-6">
-                          <div className="form-group">
-                            <input 
-                              className="form-control" 
-                              id="phone" 
-                              name="phone" 
-                              placeholder="Phone *" 
-                              type="tel" 
-                              value={formData.phone}
-                              onChange={handleInputChange}
-                              required
-                            />
-                            <span className="alert-error"></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <div className="form-group">
-                            <input 
-                              className="form-control" 
-                              id="subject" 
-                              name="subject" 
-                              placeholder="Subject *" 
-                              type="text" 
-                              value={formData.subject}
-                              onChange={handleInputChange}
-                              required
-                            />
-                            <span className="alert-error"></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <div className="form-group comments">
-                            <textarea 
-                              className="form-control" 
-                              id="message" 
-                              name="message" 
-                              placeholder="Tell Us About Project *"
-                              rows="6"
-                              value={formData.message}
-                              onChange={handleInputChange}
-                              required
-                            ></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <button type="submit" name="submit" id="submit" disabled={isSubmitting}>
-                            <i className="fa fa-paper-plane"></i> {isSubmitting ? 'Submitting...' : 'Get in Touch'}
-                          </button>
-                        </div>
-                      </div>
-                      {/* Alert Message */}
-                      <div className="col-lg-12 alert-notification">
-                        <div 
-                          id="message" 
-                          className={`alert-msg ${submitMessage.type === 'success' ? 'success' : submitMessage.type === 'error' ? 'error' : ''}`}
-                          style={{
-                            display: submitMessage.text ? 'block' : 'none',
-                            padding: submitMessage.text ? '15px' : '0',
-                            marginTop: submitMessage.text ? '15px' : '0',
-                            borderRadius: '5px',
-                            backgroundColor: submitMessage.type === 'success' ? 'rgba(34, 197, 94, 0.1)' : submitMessage.type === 'error' ? 'rgba(239, 68, 68, 0.1)' : 'transparent',
-                            color: submitMessage.type === 'success' ? '#22c55e' : submitMessage.type === 'error' ? '#ef4444' : 'inherit',
-                            border: submitMessage.text ? `1px solid ${submitMessage.type === 'success' ? '#22c55e' : '#ef4444'}` : 'none'
-                          }}
-                        >
-                          {submitMessage.text}
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-
-                {/* Contact Info Card - Second on Mobile */}
-                <div className="col-tact-stye-one col-lg-4 order-2 order-lg-1">
-                  <div className="contact-style-one-info">
-                    <ul className="contact-address">
-                      <li>
-                        <a className="phone-link" href="tel:+919876543210"><i className="fas fa-user-headset"></i> +91 98981 24987</a>
-                      </li>
-                      <li>
-                        <div className="info">
-                          <h4>Location</h4>
-                          <p>
-                            Insta Biz Web,<br />Ahmedabad, Gujarat, India - 382424
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="info">
-                          <h4>Official Email</h4>
-                          <a href="mailto:info@instabizweb.com">info@instabizweb.com</a>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="info">
-                          <h4>Working Hours</h4>
-                          <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="info">
-                          <ul className="social-link">
-                            <li>
-                              <a className="facebook" href="#" target="_blank"><i className="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                              <a className="twitter" href="#" target="_blank"><img src="/icon/twitter-dark.png" alt="Image Not Found" /></a>
-                            </li>
-                            <li>
-                              <a className="linkedin" href="#" target="_blank"><i className="fab fa-linkedin-in"></i></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* End Contact */}
-
-        {/* Start Map */}
-        <div className="maps-area bg-gray overflow-hidden">
-          <div className="google-maps">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.935195824757!2d72.5809!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
-              width="100%" 
-              height="450" 
-              style={{border: 0}} 
-              allowFullScreen="" 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-        {/* End Map */}
-
-        {/* Footer */}
-        <FooterSection />
-      </div>
-    </div>
-  );
+// ---------------------------------------------
+// ✅ SEO Metadata for InstaBiz Web - Contact Page
+// ---------------------------------------------
+export const metadata = {
+  title: "Contact InstaBiz Web | Get in Touch with Our AI Automation Experts",
+  description:
+    "Have questions about AI automation or need a custom chatbot solution? Contact InstaBiz Web today — our experts are here to help your business grow using AI-powered tools.",
+  keywords: [
+    "InstaBiz Web contact",
+    "Contact InstaBiz Web",
+    "AI chatbot support",
+    "business automation inquiry",
+    "InstaBiz Web customer service",
+    "AI solutions India",
+    "InstaBiz Web Technologies Pvt. Ltd.",
+  ].join(", "),
+  alternates: {
+    canonical: "https://www.instabizweb.com/contact",
+  },
+  openGraph: {
+    title: "Contact InstaBiz Web | Connect with AI Experts",
+    description:
+      "Reach out to InstaBiz Web — India’s leading AI business automation platform. Let’s build smarter workflows for your organization.",
+    url: "https://www.instabizweb.com/contact",
+    siteName: "InstaBiz Web",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://www.instabizweb.com/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact InstaBiz Web - AI Automation Experts",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact InstaBiz Web | Get in Touch with AI Automation Experts",
+    description:
+      "Connect with InstaBiz Web to explore AI automation, chatbot development, and CRM integration for your business.",
+    images: ["https://www.instabizweb.com/opengraph-image.png"],
+    creator: "@instabizweb",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
-export default ContactUsPage;
+// ---------------------------------------------
+// ✅ JSON-LD Structured Data for Contact Page
+// ---------------------------------------------
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  mainEntity: {
+    "@type": "Organization",
+    name: "InstaBiz Web",
+    alternateName: "InstaBiz Web Technologies Pvt. Ltd.",
+    url: "https://www.instabizweb.com",
+    logo: "https://www.instabizweb.com/opengraph-image.png",
+    description:
+      "InstaBiz Web offers AI-powered automation, chatbots, CRM tools, and digital workflow solutions for global businesses.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-9999999999",
+      contactType: "Customer Support",
+      email: "support@instabizweb.com",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi"],
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "SG Highway, Ahmedabad",
+      addressLocality: "Ahmedabad",
+      addressRegion: "Gujarat",
+      postalCode: "380015",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/instabizweb",
+      "https://www.instagram.com/instabizweb",
+      "https://twitter.com/instabizweb",
+    ],
+  },
+};
+
+// ---------------------------------------------
+// ✅ Contact Page Component
+// ---------------------------------------------
+export default function ContactUsPage() {
+  return (
+    <>
+      {/* ✅ Inject JSON-LD Schema for Google Rich Results */}
+      <Script
+        id="contact-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactSchema),
+        }}
+      />
+
+      {/* ✅ Render Contact Page UI */}
+      <ContactUS />
+    </>
+  );
+}

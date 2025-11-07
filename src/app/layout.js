@@ -8,6 +8,7 @@ import "../styles/main-style.css";
 import "../styles/navbar.css";
 import "../styles/portfolio.css";
 import Header from "../components/Header";
+import Script from "next/script"; 
 
 
 const geistSans = Geist({
