@@ -45,17 +45,18 @@ export const metadata = {
     images: ["https://www.instabizweb.com/opengraph-image.png"],
     creator: "@instabizweb",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
   robots: {
     index: true,
     follow: true,
   },
 };
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
 
 // ---------------------------------------------
 // ✅ JSON-LD Structured Data for Contact Page

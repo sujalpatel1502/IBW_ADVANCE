@@ -316,7 +316,7 @@ const PrivacyPolicyPage = () => {
         <div className="privacy-header">
           <div className="privacy-header-container">
             <div className="privacy-header-inner">
-              <h1 className="privacy-title">Privacy Policy</h1>
+              <h1 className="privacy-title">NEEL Privacy Policy</h1>
               <p className="privacy-subtitle">
                 Your privacy is important to us. Learn how we collect, use, and protect your information.
               </p>
