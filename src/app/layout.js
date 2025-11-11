@@ -251,6 +251,9 @@ export default function RootLayout({ children }) {
             gtag('config', 'YOUR_GA_ID');
           `}
         </Script> */}
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" async></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" async></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
       </head>
 
       <body
