@@ -3,6 +3,18 @@ import React from 'react';
 const TestimonialSection = () => {
   return (
     <>
+     <h2 
+        style={{ position: "absolute", left: "-9999px" }}
+      >
+        Client Testimonials – AI Automation, Web Development, CRM Solutions & App Development
+      </h2>
+
+      <p 
+        style={{ position: "absolute", left: "-9999px", top: "30px" }}
+      >
+        Read real testimonials from businesses who worked with Instabiz Web for mobile app development, AI automation, CRM development, 
+        WhatsApp automation and custom web development projects.
+      </p>
       <style jsx>{`
         /* User Icon Styling */
         .tm-provider .user-icon {
