@@ -282,9 +282,9 @@ const ServicesPage = () => {
                 <div className="col-xl-3 col-lg-6 col-md-6 single-item">
                   <div className="services-style-one-item">
                     <div className="icon">
-                      <img src="/icon/1.png" alt="Image Not Found" />
+                      <img src="/icon/1.png" alt="Image Not Found" title="SEO-Marketing Services" />
                     </div>
-                    <h4><a href="/services">Marketing & SEO Optimization</a></h4>
+                    <h4><a href="/services" title="SEO-Marketing Services">Marketing & SEO Optimization</a></h4>
                     <p>
                       Comprehensive digital marketing strategies to boost your online presence and drive targeted traffic to your business.
                     </p>
@@ -297,9 +297,9 @@ const ServicesPage = () => {
                 <div className="col-xl-3 col-lg-6 col-md-6 single-item">
                   <div className="services-style-one-item">
                     <div className="icon">
-                      <img src="/icon/2.png" alt="Image Not Found" />
+                      <img src="/icon/2.png" alt="Image Not Found" title="Mobile App Development"/>
                     </div>
-                    <h4><a href="/services">Mobile App & Web Development</a></h4>
+                    <h4><a href="/services" title="Mobile App Development">Mobile App & Web Development</a></h4>
                     <p>
                       Custom mobile applications and responsive web solutions built with cutting-edge technologies for optimal performance.
                     </p>
@@ -312,9 +312,9 @@ const ServicesPage = () => {
                 <div className="col-xl-3 col-lg-6 col-md-6 single-item">
                   <div className="services-style-one-item">
                     <div className="icon">
-                      <img src="/icon/3.png" alt="Image Not Found" />
+                      <img src="/icon/3.png" alt="Image Not Found" title="UI-UX" />
                     </div>
-                    <h4><a href="/services">UI/UX Design from Professionals</a></h4>
+                    <h4><a href="/services" title="UI/UX Design">UI/UX Design from Professionals</a></h4>
                     <p>
                       User-centered design solutions that create engaging and intuitive experiences for your customers across all platforms.
                     </p>
@@ -327,9 +327,9 @@ const ServicesPage = () => {
                 <div className="col-xl-3 col-lg-6 col-md-6 single-item">
                   <div className="services-style-one-item">
                     <div className="icon">
-                      <img src="/icon/4.png" alt="Image Not Found" />
+                      <img src="/icon/4.png" alt="Image Not Found"/>
                     </div>
-                    <h4><a href="/services">Access to the Latest Technology</a></h4>
+                    <h4><a href="/services" title="AI Technology">Access to the Latest Technology</a></h4>
                     <p>
                       Leverage modern technologies including AI, cloud computing, and automation to streamline your business operations.
                     </p>
