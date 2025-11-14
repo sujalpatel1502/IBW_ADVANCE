@@ -4,6 +4,19 @@ import { ArrowRight } from 'lucide-react';
 const HeroSection = () => {
   return (
     <div className="banner-style-one-area bg-cover" style={{backgroundImage: 'url(/shape/3.jpg)'}}>
+
+      {/* Hidden SEO H2 for Google */}
+      <h2 style={{ position: "absolute", left: "-9999px", top: "0" }}>
+        AI-Powered Web Development, App Development & Digital Innovation in Ahmedabad
+      </h2>
+
+      {/* SEO Intro Paragraph */}
+      <p style={{ position: "absolute", left: "-9999px", top: "30px" }}>
+        Instabiz Web builds AI-powered websites, mobile apps, CRM systems and digital automation 
+        solutions. We help startups and businesses grow through modern design, fast development, 
+        and smart digital marketing — based in Ahmedabad, Gujarat.
+      </p>
+
       <div className="light-banner-active bg-gray bg-cover" style={{backgroundImage: 'url(/shape/8.jpg)'}}></div>
       <div className="container">
         <div className="row">
@@ -14,8 +27,8 @@ const HeroSection = () => {
                 <h2 className="title-right split-text">Innovation</h2>
               </div>
               <div className="thumb wow fadeInRight">
-                <img className="regular-img" src="/illustration/5.png" alt="Image Not Found" title="Insta Biz Web"/>
-                <img className="light-img" src="/illustration/8.png" alt="Image Not Found" title="Insta Biz Web"/>
+                <img className="regular-img" src="/illustration/5.png"  alt="Instabiz Web Illustration" title="Instabiz Web Creative Illustration"/>
+                <img className="light-img" src="/illustration/8.png" alt="Instabiz Web Illustration Light Mode" title="Instabiz Web Illustration Light"/>
               </div>
             </div>
           </div>
