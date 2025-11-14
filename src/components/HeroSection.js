@@ -14,8 +14,8 @@ const HeroSection = () => {
                 <h2 className="title-right split-text">Innovation</h2>
               </div>
               <div className="thumb wow fadeInRight">
-                <img className="regular-img" src="/illustration/5.png" alt="Image Not Found" />
-                <img className="light-img" src="/illustration/8.png" alt="Image Not Found" />
+                <img className="regular-img" src="/illustration/5.png" alt="Image Not Found" title="Insta Biz Web"/>
+                <img className="light-img" src="/illustration/8.png" alt="Image Not Found" title="Insta Biz Web"/>
               </div>
             </div>
           </div>

@@ -5,10 +5,10 @@ import Script from "next/script";
 // ✅ Homepage SEO Metadata (Improved)
 // ---------------------------
 export const metadata = {
-  title: "Instabiz Web | Web Design, Development & Digital Marketing Agency in Ahmedabad",
+  title: "Instabiz Web - AI-Powered Web Development, App Development & Digital Innovation Agency in Ahmedabad",
   description:
-    "Instabiz Web builds modern websites, eCommerce platforms, AI automations, and digital marketing campaigns that grow your business. Trusted web agency in Ahmedabad.",
-  keywords: [
+    "AI-powered web development, app development, branding, automation, and marketing services—Instabiz Web helps businesses scale with modern digital solutions.",
+    keywords: [
     "Instabiz Web",
     "Website Design",
     "Web Development",
@@ -24,9 +24,9 @@ export const metadata = {
     "Blutec Scout"
   ],
   openGraph: {
-    title: "Instabiz Web | Web Design & Digital Marketing Agency Ahmedabad",
+    title: "Instabiz Web - AI-Powered Web Development, App Development & Digital Innovation Agency in Ahmedabad",
     description:
-      "Professional website design, development & digital marketing company in Ahmedabad — Instabiz Web helps brands grow with modern solutions.",
+      "AI-powered web development, app development, branding, automation, and marketing services—Instabiz Web helps businesses scale with modern digital solutions.",
     url: "https://instabizweb.com",
     siteName: "Instabiz Web",
     type: "website",
@@ -42,9 +42,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Instabiz Web | Custom Web Design & Digital Marketing",
+    title: "Instabiz Web - AI-Powered Web Development, App Development & Digital Innovation Agency in Ahmedabad",
     description:
-      "Instabiz Web creates impactful digital experiences through design, development & smart marketing.",
+      "AI-powered web development, app development, branding, automation, and marketing services—Instabiz Web helps businesses scale with modern digital solutions.",
     images: ["https://instabizweb.com/opengraph-image.png"],
   },
   alternates: {
