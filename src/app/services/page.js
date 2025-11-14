@@ -31,7 +31,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.instabizweb.com/opengraph-image.png",
+        url: "https://www.instabizweb.com/opengraph-image.jpeg",
         width: 1200,
         height: 630,
         alt: "InstaBiz Web Services",

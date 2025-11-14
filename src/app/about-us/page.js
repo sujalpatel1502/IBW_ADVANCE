@@ -21,19 +21,19 @@ export const metadata = {
     "AI customer engagement",
   ].join(", "),
   alternates: {
-    canonical: "https://www.instabizweb.com/about",
+    canonical: "https://www.instabizweb.com/about-us",
   },
   openGraph: {
     title: "About InstaBiz Web - Empowering AI Business Automation",
     description:
       "Discover InstaBiz Web — the AI-powered automation platform revolutionizing business operations with chatbots, CRM, and analytics.",
-    url: "https://www.instabizweb.com/about",
+    url: "https://www.instabizweb.com/about-us",
     siteName: "InstaBiz Web",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://www.instabizweb.com/opengraph-image.png",
+        url: "https://www.instabizweb.com/opengraph-image.jpeg",
         width: 1200,
         height: 630,
         alt: "About InstaBiz Web - AI Automation Platform",

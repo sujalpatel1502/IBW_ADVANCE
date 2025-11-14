@@ -71,7 +71,7 @@ const PortfolioSection = () => {
                   src="/portfolio/chennai-cabs.jpg"
                   alt="Chennai Cabs Mobile Application"
                   title="Chennai Cabs Mobile Application - Taxi Booking App"
-                  loading="lazy"
+                  // loading="lazy"
                 />
               </div>
               <div className="col-lg-5">
@@ -122,7 +122,7 @@ const PortfolioSection = () => {
                   src="/portfolio/blutec-ping.jpg"
                   alt="Blutec Ping WhatsApp Automation"
                   title="Blutec Ping - WhatsApp Automation Platform"
-                  loading="lazy"
+                  // loading="lazy"
                 />
               </div>
               <div className="col-lg-5">
@@ -171,7 +171,7 @@ const PortfolioSection = () => {
                   src="/portfolio/odoo-crm.jpg"
                   alt="Odoo CRM Custom Solutions"
                   title="Odoo CRM - Custom CRM Solutions"
-                  loading="lazy"
+                  // loading="lazy"
                 />
               </div>
 
@@ -212,7 +212,7 @@ const PortfolioSection = () => {
                   src="/portfolio/blutec-scout.jpg"
                   alt="Blutec Scout Chrome Extension"
                   title="Blutec Scout - Chrome Extension for Email Scraping"
-                  loading="lazy"
+                  // loading="lazy"
                 />
               </div>
 

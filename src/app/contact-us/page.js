@@ -18,19 +18,19 @@ export const metadata = {
     "InstaBiz Web Technologies Pvt. Ltd.",
   ].join(", "),
   alternates: {
-    canonical: "https://www.instabizweb.com/contact",
+    canonical: "https://www.instabizweb.com/contact-us",
   },
   openGraph: {
     title: "Contact InstaBiz Web | Connect with AI Experts",
     description:
       "Reach out to InstaBiz Web — India’s leading AI business automation platform. Let’s build smarter workflows for your organization.",
-    url: "https://www.instabizweb.com/contact",
+    url: "https://www.instabizweb.com/contact-us",
     siteName: "InstaBiz Web",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://www.instabizweb.com/opengraph-image.png",
+        url: "https://www.instabizweb.com/opengraph-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Contact InstaBiz Web - AI Automation Experts",

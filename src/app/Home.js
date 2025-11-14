@@ -61,7 +61,7 @@ const Home = () => {
           </div>
 
           <div className="smooth-scroll-container">
-            <h1
+             <h1
               style={{
                 position: "absolute",
                 left: "-9999px",
@@ -72,7 +72,7 @@ const Home = () => {
               }}
             >
               Instabiz Web - AI-Powered Web Development, App Development & Digital Innovation Agency in Ahmedabad
-            </h1>
+            </h1> 
             {/* Hero Section */}
             <HeroSection />
             

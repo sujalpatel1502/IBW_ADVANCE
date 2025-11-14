@@ -63,7 +63,7 @@ export const metadata = {
       "We deliver IT solutions, custom software development, web & mobile app design, and enterprise technology services in India.",
     images: [
       {
-        url: "https://www.instabizweb.com/og-image.jpg",
+        url: "https://www.instabizweb.com/opengraph-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Insta Biz Web - Custom Software & IT Solutions",
@@ -74,9 +74,9 @@ export const metadata = {
     card: "summary_large_image",
     title: "Insta Biz Web - IT Solutions & Software Development",
     description:
-      "India’s trusted IT partner for software, cloud, and digital transformation services.",
+      "India's trusted IT partner for software, cloud, and digital transformation services.",
     creator: "@instabizweb",
-    images: ["https://www.instabizweb.com/twitter-image.jpg"],
+    images: ["https://www.instabizweb.com/opengraph-image.jpeg"],
   },
   robots: {
     index: true,
@@ -92,7 +92,6 @@ export const metadata = {
   },
   verification: {
     google: "vmHuzdTef5d_mc0Kajj6SpgLm2kVB7FfoB6vesVFRv0",
-    bing: "YOUR_BING_VERIFICATION_CODE",
   },
   category: "Technology Services",
   classification: "IT & Software Development",
@@ -251,9 +250,18 @@ export default function RootLayout({ children }) {
             gtag('config', 'YOUR_GA_ID');
           `}
         </Script> */}
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" async></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" async></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+          strategy="afterInteractive"
+        />
       </head>
 
       <body

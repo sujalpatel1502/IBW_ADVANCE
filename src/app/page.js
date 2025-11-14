@@ -27,12 +27,12 @@ export const metadata = {
     title: "Instabiz Web - AI-Powered Web Development, App Development & Digital Innovation Agency in Ahmedabad",
     description:
       "AI-powered web development, app development, branding, automation, and marketing services—Instabiz Web helps businesses scale with modern digital solutions.",
-    url: "https://instabizweb.com",
+    url: "https://www.instabizweb.com",
     siteName: "Instabiz Web",
     type: "website",
     images: [
       {
-        url: "https://instabizweb.com/opengraph-image.png",
+        url: "https://www.instabizweb.com/opengraph-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Instabiz Web - Website Design & Development",
@@ -45,10 +45,10 @@ export const metadata = {
     title: "Instabiz Web - AI-Powered Web Development, App Development & Digital Innovation Agency in Ahmedabad",
     description:
       "AI-powered web development, app development, branding, automation, and marketing services—Instabiz Web helps businesses scale with modern digital solutions.",
-    images: ["https://instabizweb.com/opengraph-image.png"],
+    images: ["https://www.instabizweb.com/opengraph-image.jpeg"],
   },
   alternates: {
-    canonical: "https://instabizweb.com",
+    canonical: "https://www.instabizweb.com",
   },
   robots: {
     index: true,
@@ -64,12 +64,12 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Instabiz Web",
   legalName: "Instabiz Web Pvt. Ltd.",
-  url: "https://instabizweb.com",
-  logo: "https://instabizweb.com/assets/logo.png",
+  url: "https://www.instabizweb.com",
+  logo: "https://www.instabizweb.com/logo.png",
   sameAs: [
-    "https://www.facebook.com/instabizweb",
-    "https://www.instagram.com/instabizweb",
-    "https://www.linkedin.com/company/instabizweb"
+    "https://www.facebook.com/people/Insta-Biz-Web/61578562181866",
+    "https://www.instagram.com/insta_biz_web",
+    "https://www.linkedin.com/company/insta-biz-web"
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -95,8 +95,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Instabiz Web",
-  image: "https://instabizweb.com/assets/logo.png",
-  url: "https://instabizweb.com",
+  image: "https://www.instabizweb.com/logo.png",
+  url: "https://www.instabizweb.com",
   telephone: "+91-9898124987",
   address: {
     "@type": "PostalAddress",
@@ -121,10 +121,10 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Instabiz Web",
-  url: "https://instabizweb.com",
+  url: "https://www.instabizweb.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://instabizweb.com/search?q={search_term_string}",
+    target: "https://www.instabizweb.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };
@@ -140,7 +140,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://instabizweb.com"
+      item: "https://www.instabizweb.com"
     }
   ]
 };
@@ -149,7 +149,7 @@ const HomePage = () => {
   return (
     <>
       {/* Required for SEO Audit */}
-      <link rel="image_src" href="https://instabizweb.com/opengraph-image.png" />
+      <link rel="image_src" href="https://www.instabizweb.com/opengraph-image.jpeg" />
 
       {/* Schema */}
       <Script id="organization-schema" type="application/ld+json"
