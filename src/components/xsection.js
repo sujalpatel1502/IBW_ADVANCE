@@ -11,20 +11,6 @@ const PortfolioSection = () => {
 
   return (
     <div className="portfolio-style-three-area default-padding">
-      {/* 🔥 Hidden SEO Heading */}
-      <h2
-        style={{
-          position: "absolute",
-          left: "-9999px",
-          width: "1px",
-          height: "1px",
-          overflow: "hidden",
-        }}
-      >
-        Portfolio - Mobile App Development, Website Development, AI Automation
-        Tools, CRM Solutions & Browser Extensions
-      </h2>
-
       <style jsx>{`
         @media (min-width: 768px) {
           .portfolio-style-three-item h2 {
@@ -69,19 +55,13 @@ const PortfolioSection = () => {
               <div className="col-lg-7">
                 <img
                   src="/portfolio/chennai-cabs.jpg"
-                  alt="Chennai Cabs Mobile Application"
-                  title="Chennai Cabs Mobile Application - Taxi Booking App"
-                  loading="lazy"
+                  alt="Chennai Cabs Application"
                 />
               </div>
               <div className="col-lg-5">
                 <div className="date">Mobile Application</div>
                 <h2>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.cabs.chennaicabs&hl=en"
-                    title="Chennai Cabs Mobile App Project"
-                    // alt="Chennai Cabs Mobile Application"
-                  >
+                  <a href="#projects">
                     Chennai <strong>Cabs</strong>
                   </a>
                 </h2>
@@ -100,7 +80,6 @@ const PortfolioSection = () => {
                 <a
                   className="btn-animation mt-10"
                   href="https://play.google.com/store/apps/details?id=com.cabs.chennaicabs&hl=en"
-                  title="Chennai Cabs Mobile App Project"
                   onClick={(e) =>
                     handleSeeDetails(
                       "https://play.google.com/store/apps/details?id=com.cabs.chennaicabs&hl=en",
@@ -121,20 +100,12 @@ const PortfolioSection = () => {
                 <img
                   src="/portfolio/blutec-ping.jpg"
                   alt="Blutec Ping WhatsApp Automation"
-                  title="Blutec Ping - WhatsApp Automation Platform"
-                  loading="lazy"
                 />
               </div>
               <div className="col-lg-5">
                 <div className="date">Automation Tool</div>
                 <h2>
-                  <a
-                    href="https://ping.blutec.ai/"
-                    title="Blutec Ping Automation Tool Project"
-                    onClick={(e) =>
-                      handleSeeDetails("https://ping.blutec.ai/", e)
-                    }
-                  >
+                  <a href="#projects">
                     Blutec <strong>Ping</strong>
                   </a>
                 </h2>
@@ -167,18 +138,12 @@ const PortfolioSection = () => {
           <div className="portfolio-style-three-item">
             <div className="row align-center">
               <div className="col-lg-7">
-                <img
-                  src="/portfolio/odoo-crm.jpg"
-                  alt="Odoo CRM Custom Solutions"
-                  title="Odoo CRM - Custom CRM Solutions"
-                  loading="lazy"
-                />
+                <img src="/portfolio/odoo-crm.jpg" alt="Odoo CRM Solutions" />
               </div>
-
               <div className="col-lg-5">
                 <div className="date">CRM Solution</div>
                 <h2>
-                  <a href="/services" title="Odoo CRM Custom Project">
+                  <a href="#projects">
                     Odoo <strong>CRM</strong>
                   </a>
                 </h2>
@@ -193,11 +158,7 @@ const PortfolioSection = () => {
                   Complete CRM solution built on Odoo platform. We can build any
                   custom CRM tailored to your business needs and requirements.
                 </p>
-                <a
-                  className="btn-animation mt-10"
-                  href="/services"
-                  title="Learn more about CRM Solutions"
-                >
+                <a className="btn-animation mt-10" href="#projects">
                   <ArrowRight size={15} />
                   <span>See Details</span>
                 </a>
@@ -210,26 +171,16 @@ const PortfolioSection = () => {
               <div className="col-lg-7">
                 <img
                   src="/portfolio/blutec-scout.jpg"
-                  alt="Blutec Scout Chrome Extension"
-                  title="Blutec Scout - Chrome Extension for Email Scraping"
-                  loading="lazy"
+                  alt="Blutec Scout Extension"
                 />
               </div>
-
               <div className="col-lg-5">
                 <div className="date">Browser Extension</div>
                 <h2>
-                  <a
-                    href="https://scout.blutec.ai/"
-                    title="Blutec Scout Chrome Extension Project"
-                    onClick={(e) =>
-                      handleSeeDetails("https://scout.blutec.ai/", e)
-                    }
-                  >
+                  <a href="#projects">
                     Blutec <strong>Scout</strong>
                   </a>
                 </h2>
-
                 <p
                   style={{
                     marginTop: "20px",
@@ -238,13 +189,13 @@ const PortfolioSection = () => {
                     lineHeight: "1.6",
                   }}
                 >
-                  A powerful scraping extension that extracts Google SERP data
-                  and verified emails for lead generation & market research.
+                  Browser extension that helps users scrape Google data and
+                  extract verified emails efficiently for lead generation and
+                  research.
                 </p>
                 <a
                   className="btn-animation mt-10"
                   href="https://scout.blutec.ai/"
-                  title="View Blutec Scout Chrome Extension"
                   onClick={(e) =>
                     handleSeeDetails("https://scout.blutec.ai/", e)
                   }
