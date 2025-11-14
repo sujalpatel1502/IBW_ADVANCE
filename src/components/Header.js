@@ -48,10 +48,10 @@ const Header = () => {
             {/* Start Header Navigation */}
             <div className="col-xl-2 col-lg-3">
               <div className="navbar-header">
-                <a className="navbar-brand" href="/">
-                  <img src="/logo-light.png" className="logo" alt="IBW Logo" />
-                  <img src="/logo.png" className="logo-dark" alt="IBW Logo" />
-                </a>
+                <a className="navbar-brand" href="/" title="Instabiz Web Home">
+                  <img src="/assets/logo.png" className="logo" alt="Instabiz Web Logo" title="Instabiz Web Logo" />
+                  <img src="/assets/logo.png" className="logo-dark" alt="Instabiz Web Logo" title="Instabiz Web Logo Dark" />
+               </a>
               </div>
             </div>
             {/* End Header Navigation */}
@@ -60,14 +60,15 @@ const Header = () => {
             <div className="col-xl-7 col-lg-6">
               <div className="collapse navbar-collapse" id="navbar-menu">
                 <div className="left-info">
-                  <p><strong>Contact</strong> <a href="mailto:info@instabizweb.com">info@instabizweb.com</a></p>
+                  <p><strong>Contact</strong> 
+                  <a href="mailto:info@instabizweb.com" title="Email Instabiz Web">info@instabizweb.com</a></p>
                 </div>
                 <div className="right-info">
                   <ul>
-                    <li><a href="https://www.facebook.com/profile.php?id=61578562181866" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.instagram.com/insta_biz_web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
-                    <li><a href="https://x.com/instabizweb" target="_blank" rel="noopener noreferrer"><img src="/icon/twitter.png" alt="Image Not Found" /></a></li>
-                    <li><a href="https://www.linkedin.com/company/insta-biz-web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61578562181866" target="_blank" rel="noopener noreferrer" title="Facebook"><i className="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/insta_biz_web/" target="_blank" rel="noopener noreferrer" title="Instagram"><i className="fab fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/instabizweb" target="_blank" rel="noopener noreferrer" title="Twitter"><img src="/icon/twitter.png" alt="Twitter Icon" title="Twitter" /></a></li>
+                    <li><a href="https://www.linkedin.com/company/insta-biz-web/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i className="fab fa-linkedin-in"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -78,7 +79,7 @@ const Header = () => {
               <div className="attr-nav flex">
                 <ul>
                   <li className="side-menu">
-                    <a href="#" onClick={(e) => { e.preventDefault(); toggleMenu(); }}>
+                    <a href="#" title="Toggle Menu" onClick={(e) => { e.preventDefault(); toggleMenu(); }}>
                       <strong>MENU </strong>
                       <div className="line">
                         <span className="bar-1"></span>
@@ -99,7 +100,7 @@ const Header = () => {
                   </a>
                   <div className="widget">
                     <div className="logo">
-                      <a href="/"><img src="/logo-light.png" alt="IBW Logo" /></a>
+                      <a href="/"><img src="/assets/logo.png" alt="IBW Logo" /></a>
                     </div>
                   </div>
                   <div className="container">
@@ -111,11 +112,11 @@ const Header = () => {
                               <li>
                                 <a href="/">Home</a>
                               </li>
-                              <li><a href="/services">Services</a></li>
-                              <li><a href="/about-us">About Us</a></li>
-                              <li><a href="/portfolio">Portfolio</a></li>
-                              <li><a href="/blogs">Blogs</a></li>
-                              <li><a href="/contact-us">Contact</a></li>
+                              <li><a href="/services" title="Services">Services</a></li>
+                              <li><a href="/about-us" title="About Instabiz Web">About Us</a></li>
+                              <li><a href="/portfolio" title="Portfolio">Portfolio</a></li>
+                              <li><a href="/blogs" title="Blogs">Blogs</a></li>
+                              <li><a href="/contact-us" title="Contact">Contact</a></li>
                             </ul>
                           </div>
                         </div>
@@ -146,25 +147,25 @@ const Header = () => {
                               </ul>
                             </div>
                           </div>
-                          <div className="widget newsletter">
+                         <div className="widget newsletter">
                             <h4 className="title">Get Subscribed!</h4>
-                            <form action="#">
+                            <form>
                               <div className="input-group stylish-input-group">
-                                <input type="email" placeholder="Enter your e-mail" className="form-control" name="email" />
+                                <input type="email" placeholder="Enter your e-mail" className="form-control" name="email" title="Enter your email" />
                                 <span className="input-group-addon">
-                                  <button type="submit">
+                                  <button type="submit" title="Subscribe">
                                     <i className="fas fa-arrow-right"></i>
-                                  </button>  
+                                  </button>
                                 </span>
                               </div>
                             </form>
                           </div>
                           <div className="widget social">
                             <ul className="link">
-                              <li><a href="https://www.facebook.com/profile.php?id=61578562181866" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
-                              <li><a href="https://www.instagram.com/insta_biz_web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
-                              <li><a href="https://x.com/instabizweb" target="_blank" rel="noopener noreferrer"><img src="/icon/twitter.png" alt="Image Not Found" /></a></li>
-                              <li><a href="https://www.linkedin.com/company/insta-biz-web/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
+                              <li><a href="https://www.facebook.com/profile.php?id=61578562181866" target="_blank" rel="noopener noreferrer" title="Facebook"><i className="fab fa-facebook-f"></i></a></li>
+                              <li><a href="https://www.instagram.com/insta_biz_web/" target="_blank" rel="noopener noreferrer" title="Instagram"><i className="fab fa-instagram"></i></a></li>
+                              <li><a href="https://x.com/instabizweb" target="_blank" rel="noopener noreferrer" title="Twitter"><img src="/icon/twitter.png" alt="Twitter Icon" title="Twitter" /></a></li>
+                              <li><a href="https://www.linkedin.com/company/insta-biz-web/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i className="fab fa-linkedin-in"></i></a></li>
                             </ul>
                           </div>
                         </div>
