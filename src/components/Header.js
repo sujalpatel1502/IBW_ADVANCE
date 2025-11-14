@@ -49,8 +49,8 @@ const Header = () => {
             <div className="col-xl-2 col-lg-3">
               <div className="navbar-header">
                 <a className="navbar-brand" href="/" title="Instabiz Web Home">
-                  <img src="/assets/logo.png" className="logo" alt="Instabiz Web Logo" title="Instabiz Web Logo" />
-                  <img src="/assets/logo.png" className="logo-dark" alt="Instabiz Web Logo" title="Instabiz Web Logo Dark" />
+                  <img src="logo.png" className="logo" alt="Instabiz Web Logo" title="Instabiz Web Logo" />
+                  <img src="logo.png" className="logo-dark" alt="Instabiz Web Logo" title="Instabiz Web Logo Dark" />
                </a>
               </div>
             </div>
